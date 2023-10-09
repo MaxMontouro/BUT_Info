@@ -1,0 +1,2 @@
+         ligne 1/3 de f1.txt
+      ligne 2/3 de f1.txtligne 1/7 de f2.txtligne 3/7 de f2.txtligne 4/7 de f2.txtligne 7/7 de f2.txt
