@@ -1,1 +1,2 @@
 # BUT_Info
+png*
