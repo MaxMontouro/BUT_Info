@@ -21,8 +21,8 @@ class Individu{
         string getPrenom();
         void setPrenom(string);
         string getMaVoiture();
-        void setMaVoiture(*);
+        void setMaVoiture(Voiture*);
         //METHODES USUELLES
         virtual string toString();
-}
+};
 #endif //CLASSE INDIVIDU_H

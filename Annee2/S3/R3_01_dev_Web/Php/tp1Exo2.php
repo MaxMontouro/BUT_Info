@@ -1,3 +1,5 @@
 <?php
-    echo "Hello World !"
+    
+    $HelloWorld = "Hello World";
+    echo $HelloWorld;
 ?>
