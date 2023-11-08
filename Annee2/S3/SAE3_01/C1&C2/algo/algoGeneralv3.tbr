@@ -1,0 +1,168 @@
+<?xml version="1.1"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>algoGeneral</nom>
+  <date_creation>7/11/2023 15:14</date_creation>
+  <Elements>
+    <Action>
+      <Position>654;44</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>mot</PreAssertion>
+      <PostAssertion>motCorrige</PostAssertion>
+      <Titre>Algorithme général de correction de mots</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Condition>
+          <Position>751.5;165</Position>
+          <StyleLien>1</StyleLien>
+          <estUnique>1</estUnique>
+          <operationsLogiques>
+            <operation>
+              <Titre>Le mot ne commence pas
+par une majuscule</Titre>
+              <Enfants>
+                <Action>
+                  <Position>16;291</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>motCorrige, 
+distanceMax,
+ensembleMots</PostAssertion>
+                  <Titre>Initialisation</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>277;292</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>mot,
+distanceMax</PreAssertion>
+                  <PostAssertion>ensembleMots</PostAssertion>
+                  <Titre>Obtenir l'ensemble des 
+mots ayant une distance
+(Damerau-Levenshtein) de 
+la longueur de mot / 4 + 1</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>733;293</Position>
+                  <StyleLien>2</StyleLien>
+                  <PreAssertion>ensembleMots</PreAssertion>
+                  <PostAssertion>motCorrige</PostAssertion>
+                  <Titre>Vérifier l'existance de cahque mot de
+ensembleMots dans le dictionnaire</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants>
+                    <Condition>
+                      <Position>841.5;416</Position>
+                      <StyleLien>0</StyleLien>
+                      <estUnique>0</estUnique>
+                      <operationsLogiques>
+                        <operation>
+                          <Titre>mot avec distance = 0 existe</Titre>
+                          <Enfants>
+                            <Action>
+                              <Position>725;522</Position>
+                              <StyleLien>1</StyleLien>
+                              <PreAssertion>?</PreAssertion>
+                              <PostAssertion>?</PostAssertion>
+                              <Titre>Pas de modification 
+motCorrige = mot</Titre>
+                              <DetailsVisible>1</DetailsVisible>
+                              <DetailsVideVisible>0</DetailsVideVisible>
+                              <Enfants/>
+                            </Action>
+                            <Sortie>
+                              <Position>890;557</Position>
+                            </Sortie>
+                          </Enfants>
+                        </operation>
+                        <operation>
+                          <Titre>Sinon</Titre>
+                          <Enfants>
+                            <Condition>
+                              <Position>954.5;533</Position>
+                              <StyleLien>0</StyleLien>
+                              <estUnique>0</estUnique>
+                              <operationsLogiques>
+                                <operation>
+                                  <Titre>mot avec distance &lt;=
+(mot/4+1) existe</Titre>
+                                  <Enfants>
+                                    <Procedure>
+                                      <Position>804;663</Position>
+                                      <StyleLien>1</StyleLien>
+                                      <PreAssertion>?</PreAssertion>
+                                      <PostAssertion>?</PostAssertion>
+                                      <Titre>obtenirMotPlusProbable(mot)</Titre>
+                                      <DetailsVisible>1</DetailsVisible>
+                                      <DetailsVideVisible>0</DetailsVideVisible>
+                                      <Enfants/>
+                                    </Procedure>
+                                    <Sortie>
+                                      <Position>1033;690</Position>
+                                    </Sortie>
+                                  </Enfants>
+                                </operation>
+                                <operation>
+                                  <Titre>Sinon</Titre>
+                                  <Enfants>
+                                    <Action>
+                                      <Position>1115;667</Position>
+                                      <StyleLien>1</StyleLien>
+                                      <PreAssertion>?</PreAssertion>
+                                      <PostAssertion>?</PostAssertion>
+                                      <Titre>Pas de modification 
+motCorrige = mot</Titre>
+                                      <DetailsVisible>1</DetailsVisible>
+                                      <DetailsVideVisible>0</DetailsVideVisible>
+                                      <Enfants/>
+                                    </Action>
+                                  </Enfants>
+                                </operation>
+                              </operationsLogiques>
+                            </Condition>
+                          </Enfants>
+                        </operation>
+                      </operationsLogiques>
+                    </Condition>
+                  </Enfants>
+                </Action>
+                <Action>
+                  <Position>1244;295</Position>
+                  <StyleLien>2</StyleLien>
+                  <PreAssertion>motCorrige</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>affichage</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants>
+                    <Action>
+                      <Position>1327;414</Position>
+                      <StyleLien>1</StyleLien>
+                      <PreAssertion>?</PreAssertion>
+                      <PostAssertion>motCorrige</PostAssertion>
+                      <Titre>return motCorrige</Titre>
+                      <DetailsVisible>1</DetailsVisible>
+                      <DetailsVideVisible>0</DetailsVideVisible>
+                      <Enfants/>
+                    </Action>
+                  </Enfants>
+                </Action>
+              </Enfants>
+            </operation>
+            <operation>
+              <Titre>Sinon</Titre>
+              <Enfants/>
+            </operation>
+          </operationsLogiques>
+        </Condition>
+      </Enfants>
+    </Action>
+  </Elements>
+</Algorithme>

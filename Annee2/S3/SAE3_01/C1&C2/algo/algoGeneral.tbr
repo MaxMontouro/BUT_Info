@@ -2,7 +2,7 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>algo</nom>
-  <date_creation>6/11/2023 14:31</date_creation>
+  <date_creation>7/11/2023 11:24</date_creation>
   <Elements>
     <Action>
       <Position>654;44</Position>
@@ -22,189 +22,188 @@
               <Titre>mot ne commence pas par majuscule</Titre>
               <Enfants>
                 <Action>
-                  <Position>724;231</Position>
-                  <StyleLien>2</StyleLien>
-                  <PreAssertion>?</PreAssertion>
-                  <PostAssertion>?</PostAssertion>
+                  <Position>412;326</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>mot, distanceMax</PreAssertion>
+                  <PostAssertion>ensembleMots</PostAssertion>
                   <Titre>Obtenir l'ensemble des mots ayant une distance (Damarau-Levenshtein) de 0,1,2
 </Titre>
                   <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>97;322</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>motCorrige</PostAssertion>
+                  <Titre>initialisation</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>1000;328</Position>
+                  <StyleLien>2</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>comparer seulement ceux existants dans le dictionnaire</Titre>
+                  <DetailsVisible>1</DetailsVisible>
                   <DetailsVideVisible>0</DetailsVideVisible>
                   <Enfants>
-                    <Action>
-                      <Position>714;330</Position>
-                      <StyleLien>2</StyleLien>
-                      <PreAssertion>?</PreAssertion>
-                      <PostAssertion>?</PostAssertion>
-                      <Titre>comparer seulement ceux existants dans le dictionnaire</Titre>
-                      <DetailsVisible>1</DetailsVisible>
-                      <DetailsVideVisible>0</DetailsVideVisible>
-                      <Enfants>
-                        <Condition>
-                          <Position>443.5;433</Position>
-                          <StyleLien>0</StyleLien>
-                          <estUnique>0</estUnique>
-                          <operationsLogiques>
-                            <operation>
-                              <Titre>mot avec distance = 0</Titre>
-                              <Enfants>
-                                <Action>
-                                  <Position>266;524</Position>
-                                  <StyleLien>1</StyleLien>
-                                  <PreAssertion>?</PreAssertion>
-                                  <PostAssertion>?</PostAssertion>
-                                  <Titre>Pas de modification 
+                    <Condition>
+                      <Position>629.5;440</Position>
+                      <StyleLien>0</StyleLien>
+                      <estUnique>0</estUnique>
+                      <operationsLogiques>
+                        <operation>
+                          <Titre>mot avec distance = 0</Titre>
+                          <Enfants>
+                            <Action>
+                              <Position>557;534</Position>
+                              <StyleLien>1</StyleLien>
+                              <PreAssertion>?</PreAssertion>
+                              <PostAssertion>?</PostAssertion>
+                              <Titre>Pas de modification 
 motCorrige = mot
 </Titre>
-                                  <DetailsVisible>1</DetailsVisible>
-                                  <DetailsVideVisible>0</DetailsVideVisible>
-                                  <Enfants/>
-                                </Action>
-                                <Sortie>
-                                  <Position>463;537</Position>
-                                </Sortie>
-                              </Enfants>
-                            </operation>
-                            <operation>
-                              <Titre>Sinon</Titre>
-                              <Enfants>
-                                <Condition>
-                                  <Position>535.5;534</Position>
-                                  <StyleLien>0</StyleLien>
-                                  <estUnique>0</estUnique>
-                                  <operationsLogiques>
-                                    <operation>
-                                      <Titre>mot avec distance = 1</Titre>
-                                      <Enfants>
-                                        <Procedure>
-                                          <Position>356;620</Position>
-                                          <StyleLien>1</StyleLien>
-                                          <PreAssertion>?</PreAssertion>
-                                          <PostAssertion>?</PostAssertion>
-                                          <Titre>obtenirMotPlusProbable(string dictionnaire, mot, motCorrige)</Titre>
-                                          <DetailsVisible>1</DetailsVisible>
-                                          <DetailsVideVisible>0</DetailsVideVisible>
-                                          <Enfants/>
-                                        </Procedure>
-                                        <Sortie>
-                                          <Position>634;630</Position>
-                                        </Sortie>
-                                      </Enfants>
-                                    </operation>
-                                    <operation>
-                                      <Titre>Sinon</Titre>
-                                      <Enfants>
-                                        <Condition>
-                                          <Position>773.5;617</Position>
-                                          <StyleLien>1</StyleLien>
-                                          <estUnique>0</estUnique>
-                                          <operationsLogiques>
-                                            <operation>
-                                              <Titre>mot avec distance = 2</Titre>
-                                              <Enfants>
-                                                <Procedure>
-                                                  <Position>625;725</Position>
-                                                  <StyleLien>1</StyleLien>
-                                                  <PreAssertion>?</PreAssertion>
-                                                  <PostAssertion>?</PostAssertion>
-                                                  <Titre>obtenirMotPlusProbable(string dictionnaire, mot, motCorrige)</Titre>
-                                                  <DetailsVisible>1</DetailsVisible>
-                                                  <DetailsVideVisible>0</DetailsVideVisible>
-                                                  <Enfants/>
-                                                </Procedure>
-                                                <Sortie>
-                                                  <Position>882;737</Position>
-                                                </Sortie>
-                                              </Enfants>
-                                            </operation>
-                                            <operation>
-                                              <Titre>Sinon</Titre>
-                                              <Enfants>
-                                                <Action>
-                                                  <Position>988;720</Position>
-                                                  <StyleLien>1</StyleLien>
-                                                  <PreAssertion>?</PreAssertion>
-                                                  <PostAssertion>?</PostAssertion>
-                                                  <Titre>motCorrige = erreur</Titre>
-                                                  <DetailsVisible>1</DetailsVisible>
-                                                  <DetailsVideVisible>0</DetailsVideVisible>
-                                                  <Enfants/>
-                                                </Action>
-                                                <Sortie>
-                                                  <Position>1198;740</Position>
-                                                </Sortie>
-                                              </Enfants>
-                                            </operation>
-                                          </operationsLogiques>
-                                        </Condition>
-                                      </Enfants>
-                                    </operation>
-                                  </operationsLogiques>
-                                </Condition>
-                              </Enfants>
-                            </operation>
-                          </operationsLogiques>
-                        </Condition>
-                      </Enfants>
-                    </Action>
-                    <Action>
-                      <Position>294;327</Position>
-                      <StyleLien>1</StyleLien>
-                      <PreAssertion>?</PreAssertion>
-                      <PostAssertion>motCorrige</PostAssertion>
-                      <Titre>initialisation</Titre>
-                      <DetailsVisible>1</DetailsVisible>
-                      <DetailsVideVisible>0</DetailsVideVisible>
-                      <Enfants/>
-                    </Action>
-                    <Action>
-                      <Position>1146;330</Position>
-                      <StyleLien>2</StyleLien>
-                      <PreAssertion>motCorrige</PreAssertion>
-                      <PostAssertion>?</PostAssertion>
-                      <Titre>affichage</Titre>
-                      <DetailsVisible>1</DetailsVisible>
-                      <DetailsVideVisible>0</DetailsVideVisible>
-                      <Enfants>
-                        <Condition>
-                          <Position>1157.5;427</Position>
-                          <StyleLien>0</StyleLien>
-                          <estUnique>0</estUnique>
-                          <operationsLogiques>
-                            <operation>
-                              <Titre>motCorrige = erreur</Titre>
-                              <Enfants>
-                                <Action>
-                                  <Position>1079;519</Position>
-                                  <StyleLien>1</StyleLien>
-                                  <PreAssertion>?</PreAssertion>
-                                  <PostAssertion>?</PostAssertion>
-                                  <Titre>afficher "aucun mot proche de la saisie"</Titre>
-                                  <DetailsVisible>1</DetailsVisible>
-                                  <DetailsVideVisible>0</DetailsVideVisible>
-                                  <Enfants/>
-                                </Action>
-                              </Enfants>
-                            </operation>
-                            <operation>
-                              <Titre>Sinon</Titre>
-                              <Enfants>
-                                <Action>
-                                  <Position>1392;526</Position>
-                                  <StyleLien>1</StyleLien>
-                                  <PreAssertion>?</PreAssertion>
-                                  <PostAssertion>?</PostAssertion>
-                                  <Titre>return motCorrige</Titre>
-                                  <DetailsVisible>1</DetailsVisible>
-                                  <DetailsVideVisible>0</DetailsVideVisible>
-                                  <Enfants/>
-                                </Action>
-                              </Enfants>
-                            </operation>
-                          </operationsLogiques>
-                        </Condition>
-                      </Enfants>
-                    </Action>
+                              <DetailsVisible>1</DetailsVisible>
+                              <DetailsVideVisible>0</DetailsVideVisible>
+                              <Enfants/>
+                            </Action>
+                            <Sortie>
+                              <Position>741;546</Position>
+                            </Sortie>
+                          </Enfants>
+                        </operation>
+                        <operation>
+                          <Titre>Sinon</Titre>
+                          <Enfants>
+                            <Condition>
+                              <Position>798.5;543</Position>
+                              <StyleLien>0</StyleLien>
+                              <estUnique>0</estUnique>
+                              <operationsLogiques>
+                                <operation>
+                                  <Titre>mot avec distance = 1</Titre>
+                                  <Enfants>
+                                    <Procedure>
+                                      <Position>636;629</Position>
+                                      <StyleLien>1</StyleLien>
+                                      <PreAssertion>?</PreAssertion>
+                                      <PostAssertion>?</PostAssertion>
+                                      <Titre>obtenirMotPlusProbable(string dictionnaire, mot, motCorrige)</Titre>
+                                      <DetailsVisible>1</DetailsVisible>
+                                      <DetailsVideVisible>0</DetailsVideVisible>
+                                      <Enfants/>
+                                    </Procedure>
+                                    <Sortie>
+                                      <Position>878;638</Position>
+                                    </Sortie>
+                                  </Enfants>
+                                </operation>
+                                <operation>
+                                  <Titre>Sinon</Titre>
+                                  <Enfants>
+                                    <Condition>
+                                      <Position>958.5;620</Position>
+                                      <StyleLien>1</StyleLien>
+                                      <estUnique>0</estUnique>
+                                      <operationsLogiques>
+                                        <operation>
+                                          <Titre>mot avec distance = 2</Titre>
+                                          <Enfants>
+                                            <Procedure>
+                                              <Position>759;728</Position>
+                                              <StyleLien>1</StyleLien>
+                                              <PreAssertion>?</PreAssertion>
+                                              <PostAssertion>?</PostAssertion>
+                                              <Titre>obtenirMotPlusProbable(string dictionnaire, mot, motCorrige)</Titre>
+                                              <DetailsVisible>1</DetailsVisible>
+                                              <DetailsVideVisible>0</DetailsVideVisible>
+                                              <Enfants/>
+                                            </Procedure>
+                                            <Sortie>
+                                              <Position>999;740</Position>
+                                            </Sortie>
+                                          </Enfants>
+                                        </operation>
+                                        <operation>
+                                          <Titre>Sinon</Titre>
+                                          <Enfants>
+                                            <Action>
+                                              <Position>1090;720</Position>
+                                              <StyleLien>1</StyleLien>
+                                              <PreAssertion>?</PreAssertion>
+                                              <PostAssertion>?</PostAssertion>
+                                              <Titre>motCorrige = erreur</Titre>
+                                              <DetailsVisible>1</DetailsVisible>
+                                              <DetailsVideVisible>0</DetailsVideVisible>
+                                              <Enfants/>
+                                            </Action>
+                                            <Sortie>
+                                              <Position>1298;729</Position>
+                                            </Sortie>
+                                          </Enfants>
+                                        </operation>
+                                      </operationsLogiques>
+                                    </Condition>
+                                  </Enfants>
+                                </operation>
+                              </operationsLogiques>
+                            </Condition>
+                          </Enfants>
+                        </operation>
+                      </operationsLogiques>
+                    </Condition>
+                  </Enfants>
+                </Action>
+                <Action>
+                  <Position>1313;311</Position>
+                  <StyleLien>2</StyleLien>
+                  <PreAssertion>motCorrige</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>affichage</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants>
+                    <Condition>
+                      <Position>1157.5;427</Position>
+                      <StyleLien>0</StyleLien>
+                      <estUnique>0</estUnique>
+                      <operationsLogiques>
+                        <operation>
+                          <Titre>motCorrige = erreur</Titre>
+                          <Enfants>
+                            <Action>
+                              <Position>1079;519</Position>
+                              <StyleLien>1</StyleLien>
+                              <PreAssertion>?</PreAssertion>
+                              <PostAssertion>?</PostAssertion>
+                              <Titre>afficher "aucun mot proche de la saisie"</Titre>
+                              <DetailsVisible>1</DetailsVisible>
+                              <DetailsVideVisible>0</DetailsVideVisible>
+                              <Enfants/>
+                            </Action>
+                          </Enfants>
+                        </operation>
+                        <operation>
+                          <Titre>Sinon</Titre>
+                          <Enfants>
+                            <Action>
+                              <Position>1392;526</Position>
+                              <StyleLien>1</StyleLien>
+                              <PreAssertion>?</PreAssertion>
+                              <PostAssertion>?</PostAssertion>
+                              <Titre>return motCorrige</Titre>
+                              <DetailsVisible>1</DetailsVisible>
+                              <DetailsVideVisible>0</DetailsVideVisible>
+                              <Enfants/>
+                            </Action>
+                          </Enfants>
+                        </operation>
+                      </operationsLogiques>
+                    </Condition>
                   </Enfants>
                 </Action>
               </Enfants>
