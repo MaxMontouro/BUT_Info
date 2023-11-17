@@ -2,7 +2,7 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>distanceLettre</nom>
-  <date_creation>8/11/2023 09:04</date_creation>
+  <date_creation>17/11/2023 14:45</date_creation>
   <Elements>
     <Action>
       <Position>698;71</Position>
@@ -15,7 +15,7 @@ listeEnsembleMotsExistant</PreAssertion>
       <DetailsVideVisible>1</DetailsVideVisible>
       <Enfants>
         <Iteration>
-          <Position>926.5;156.5</Position>
+          <Position>921.5;139.5</Position>
           <StyleLien>1</StyleLien>
           <Titre>pour i allant de 0 à 
 listeEnsembleMotsExistant.size()</Titre>
@@ -60,7 +60,7 @@ matriceAzerty[NB_LIGNE][NB_COLONNE],
                   <IterationFixe>1</IterationFixe>
                   <Enfants>
                     <Action>
-                      <Position>460;486</Position>
+                      <Position>619;480</Position>
                       <StyleLien>1</StyleLien>
                       <PreAssertion>compteur, 
 matriceAzerty[NB_LIGNE][NB_COLONNE],
