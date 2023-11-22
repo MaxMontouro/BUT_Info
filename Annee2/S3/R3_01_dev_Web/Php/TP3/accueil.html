@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de Photos</title>
+</head>
 <body>
-<form action="generateur.php" method="post">
-    <label><strong>Combien de photos sont à upload ?</strong> </label>
-    <input name="photos" id="photos" type="number" required/><br>
-
-    <input type="submit" value="ENVOYER PHOTOS"><br>
-
-
-
- </form>
-
-
-
+    <h1>Upload de Photos</h1>
+    <form action="generer_formulaire.php" method="post">
+        <label for="nbPhotos">Combien de photos souhaitez-vous uploader ?</label>
+        <input type="number" id="nbPhotos" name="nbPhotos" required min="1">
+        <input type="submit" value="OK">
+    </form>
 </body>
- </html>
+</html>
