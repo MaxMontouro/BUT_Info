@@ -1,0 +1,1 @@
+Attention pour l'uitlisation de certains des TP, il faut se trouver directement sur Citrix car nous utilisons des BD comme celle du TP4
