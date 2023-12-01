@@ -4,7 +4,7 @@ public class ObservableMeteo extends Observable{
     private double temperature, pression;
 
     //CONSTRUCTEUR
-    ObservableMeteo(String unNom){this.libelle = unNom;};
+    ObservableMeteo(String unNom){this.setLibelle(unNom);};
     //ENCAPSULATION
     public String getDate() {
         return this.date;
@@ -17,6 +17,10 @@ public class ObservableMeteo extends Observable{
     public double getTemperature() {
         return this.temperature;
     }
+
+    public String getLibelle(){return this.libelle;}
+
+    public void setLibelle(String unLib){this.libelle = unLib; notifierObservateur();}
     public void setPression(double pression) {
         this.pression = pression;
         notifierObservateur();

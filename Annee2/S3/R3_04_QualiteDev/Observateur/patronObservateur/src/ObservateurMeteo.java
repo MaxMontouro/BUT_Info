@@ -30,20 +30,21 @@ public class ObservateurMeteo extends Observateur{
     public void setlTemperature(double lTemperature) {
         this.lTemperature = lTemperature;
     }
-    public void setObservable(ObservateurMeteo unObservable){
-        unObservable.setlDate(observable.getDate());
-        unObservable.setlTemperature(observable.getTemperature());
-        unObservable.setlPression(observable.getPression());
+    public void setObservable(ObservableMeteo unObservable){
+        this.setlDate(unObservable.getDate());
+        this.setlPression(unObservable.getPression());
+        this.setlTemperature(unObservable.getTemperature());
     }
+    public String getLibelleObservateur(){return this.libelle;}
     @Override
     public void reagir() {
         String date = observable.getDate();
         double temp = observable.getTemperature();
         double pression = observable.getPression();
 
-        setlDate(date);
-        setlPression(pression);
-        setlTemperature(temp);
+        this.setlDate(date);
+        this.setlPression(pression);
+        this.setlTemperature(temp);
     }
 }
 
