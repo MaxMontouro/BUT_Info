@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2 </title>
+</head>
+<body>
+    <input type="text" id="text" onkeydown="getSuggestions()">
+    <div id="pays">
+
+    </div>
+    <script>
+        function getSuggestions(){ //execution de maniere asyncrone en ajax 
+            var input = document.getElementById("text").value;
+            var xhr = new XMLHttpRequest(); //creation de la requete
+            xhr.onreadystatechange = function(){ //action a realise quand la requete est fini
+                if(xhr.readyState == 4 && xhr.status == 200){
+                var cityArray = JSON.parse(xhr.responseText);
+                var htmlList = "<ul>" + cityArray.map((x => "<li>" + x + "</li>")).join("") + "</ul>";
+                document.getElementById("pays").innerHTML = htmlList;
+                }
+            }
+            xhr.open("GET", `test.php?nomPays=${input}`, true); // parametrage de la requete 
+            xhr.send();//envoi de la requete
+    };
+            
+    </script>
+</body>
+</html>
