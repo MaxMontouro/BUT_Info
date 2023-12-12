@@ -1,70 +1,119 @@
 /**
-    * @file main.c
+    * @brief Programme de gestion d'un salon de coiffure
     * @author MaxMontouro
+    * @file main.c
     * @date 2021-10-13
     * @version 0.1
-    * @note TP6 EXO1
-    */
+    * @note TP6 EXO1 avec les threads
+*/
 
-#include <stdlib.h> //: Gestion de la mémoire, conversions et fonctions systèmes
-#include <string.h> //: Gestion de chaînes de caractères
-#include <ctype.h> //: Manipulation de caractères
-#include <stdio.h> //: Gestion des fichiers et des Entrées/Sorties en général
-#include <unistd.h> //: Accès à l'API du système d'exploitation POSIX
-#include <threads.h> //: Création/Gestion de threads
-#include <ctype.h> //: Manipulation de caractères
-#include <sys/wait.h> //: Gestion des processus
-#include <errno.h> //: Gestion des erreurs
-#include <pthread.h> //: Création/Gestion de threads
-#include <signal.h> // Gestion des signaux
-#include <time.h> //: Gestion du temps
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <time.h>
+#include <pthread.h>
 
+const int MAX_CLIENTS = 10; // Nombre maximum de clients
+const int MIN_CLIENTS = 1; // Nombre minimum de clients
+const int TEMPS_MAX_ATTENTE_DEMANDE_CLIENT = 10; // Temps maximum d'attente pour la demande d'un client (entre 1 et 10 secondes)
+const int TEMPS_MAX_COIFFURE = 5; // Temps maximum pour la coiffure (entre 1 et 10 secondes)
 
-void thread_coiffeur(); 
-int nombre_client(); // retourne un nombre aléatoire entre 1 et 10
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER; // Initialisation du mutex
 
-int main(){
+struct Client {
+    int nombreSiegesDispo;
+    int *tableauDeSiegesDispo;
+    int nbClient;
+};
 
-    //DECLARATION DES THREADS
-    pthread_attr_t attr; //: Attributs des threads
-    pthread_t id_thread_coiffeur; //: Identifiant du thread coiffeur
-    pthread_attr_init(&attr); //: Initialisation des attributs des threads
-
-    //Definition du nombre de sièges dispo
-    printf("Aujourd'hui vous définirez le nombre de sièges dispo en salle d'attente : (veuillez entrer un nombre entre 1 et 10)\n(PS : si vous entrez un nombre supérieur à 10, il sera automatiquement ramené à 10) : ");
-    int nb_sieges;
-    scanf("%d", &nb_sieges);
-    if(nb_sieges > 10){
-        nb_sieges = 10;
-    }
-
-    //Boucle
-    while(1){
-        if(rand()%2 == 0){
-            printf("Le coiffeur est en train de dormir\n");
-            sleep(1);
-        }
-        else{
-        for int i = rand()%10+1; i > 0; i--{;
-            pthread_create(&id_thread_coiffeur, &attr, thread_coiffeur, NULL);
-            
+void *fonction_coiffeur(void *arg) {
+    struct Client *client = (struct Client *)arg; // Récupération des données de la structure
+    printf("Le coiffeur est en train de dormir\n");
+    sleep(1);
+    printf("Le coiffeur se réveille\n");
+    while (1) {
+        pthread_mutex_lock(&mutex);
+        for (int i = 0; i < client->nombreSiegesDispo; i++) {
+            if (client->tableauDeSiegesDispo[i] != 0) {
+                printf("Le coiffeur est en train de couper les cheveux d'un client %d\n", client->tableauDeSiegesDispo[i]);
+                printf(" qui est assis sur la chaise %d\n", i + 1);
+                sleep(TEMPS_MAX_COIFFURE);
+                printf("Le client %d s'est fait couper les cheveux et est parti\n", client->tableauDeSiegesDispo[i]);
+                client->tableauDeSiegesDispo[i] = 0;
             }
         }
-    }
-    return 0;
-}
-
-void thread_coiffeur(){
-    int nb_client = nombre_client();
-    for(int i = nb_client; i > 0; i--){
-        printf("Le client %d est en train de se faire coiffer\n", i);
-        sleep(5);
-        printf("Le client %d a fini de se faire coiffer\n", i);
-        printf("Il reste donc %d clients à coiffer\n", i);
+        pthread_mutex_unlock(&mutex);
+        sleep(1);
     }
     pthread_exit(NULL);
 }
 
-int nombre_client(){
-    return rand()%10+1;
+void *fonction_client(void *arg) {
+    struct Client *client = (struct Client *)arg; // Récupération des données de la structure
+    pthread_t idThreadClient = pthread_self(); // Id du thread client
+
+    pthread_mutex_lock(&mutex);
+    for (int i = 0; i < client->nombreSiegesDispo; i++) {
+        if (client->tableauDeSiegesDispo[i] == 0) {
+            printf("Le client %lu s'assoit sur la chaise %d\n", idThreadClient, i + 1);
+            printf("Le client %lu est en train de se faire coiffer\n", idThreadClient);
+            client->tableauDeSiegesDispo[i] = idThreadClient;
+            client->nbClient--;
+            pthread_mutex_unlock(&mutex);
+            sleep(TEMPS_MAX_COIFFURE);
+            pthread_mutex_lock(&mutex);
+            printf("Le client %lu s'est fait couper les cheveux et est parti\n", idThreadClient);
+            client->tableauDeSiegesDispo[i] = 0;
+            pthread_mutex_unlock(&mutex);
+            pthread_exit(NULL);
+        }
+    }
+    printf("Le client %lu n'a pas pu s'asseoir et est parti\n", idThreadClient);
+    pthread_mutex_unlock(&mutex);
+    pthread_exit(NULL);
+}
+
+int main(void) {
+    srand(time(NULL)); // Initialisation de rand
+
+    struct Client client; // Déclaration de la structure
+    client.nombreSiegesDispo = rand() % 10 + 1;
+    client.tableauDeSiegesDispo = malloc(client.nombreSiegesDispo * sizeof(int));
+    client.nbClient = rand() % 10 + 1;
+
+    // Définition des threads
+    pthread_attr_t attr;
+    pthread_attr_init(&attr);
+    pthread_t idThreadCoiffeur;
+    pthread_create(&idThreadCoiffeur, &attr, fonction_coiffeur, (void *)&client);
+
+    // Affichage des valeurs défini par les deux rand
+    printf("Pour ce programme, le nombre de sièges est de %d et de %d clients\n", client.nombreSiegesDispo, client.nbClient);
+    printf("Le temps de coupe est de %d secondes\n", TEMPS_MAX_COIFFURE);
+
+    // Initialisation du tableau des sièges à 0
+    for (int i = 0; i < client.nombreSiegesDispo; i++) {
+        client.tableauDeSiegesDispo[i] = 0;
+    }
+
+    //boucle principale du programme qui execute les threads clients
+    while (client.nbClient > 0) {
+        for (int i = 0; i < rand() % client.nbClient + 1; i++) {
+            pthread_t idThreadClient;
+            pthread_create(&idThreadClient, &attr, fonction_client, (void *)&client);
+            // pthread_join(idThreadClient, NULL); // Retiré pour éviter le blocage du programme
+        }
+        sleep(TEMPS_MAX_ATTENTE_DEMANDE_CLIENT);
+    }
+
+    // Fin du programme
+    printf("Il n'y a plus de client\n");
+    printf("Le coiffeur est parti\n");
+    free(client.tableauDeSiegesDispo); // Libération de la mémoire
+
+    pthread_cancel(idThreadCoiffeur); // Annulation du thread coiffeur
+    pthread_join(idThreadCoiffeur, NULL); // Attente de la fin du thread coiffeur
+    pthread_mutex_destroy(&mutex); // Destruction du mutex
+
+    return 0;
 }

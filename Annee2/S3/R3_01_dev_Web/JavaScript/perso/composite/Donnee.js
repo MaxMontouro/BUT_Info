@@ -1,4 +1,4 @@
- export const  matrice = new Array();
+export const  matrice = new Array();
 matrice = [
     ['&', 'é', '"', "'", '(', '-', 'è', '_', 'ç', 'à', ')'],
     ['a', 'z', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '^'],
