@@ -14,5 +14,6 @@ public class Main {
         ((ServeurChat) unServeurChat).ajouterUtilisateur(user3);
 
         ((ServeurChat) unServeurChat).diffuserMessageDe(("Je suis " + user1.getNom() + " et je suis présent"), user1);
+        ((ServeurChat) unServeurChat).diffuserMessageDe(("Je suis " + user1.getNom() + " et je suis présent"), user2);
     }
 }
