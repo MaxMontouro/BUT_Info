@@ -2,7 +2,7 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>verifierExistanceMot</nom>
-  <date_creation>8/11/2023 09:04</date_creation>
+  <date_creation>18/12/2023 14:58</date_creation>
   <Elements>
     <Action>
       <Position>573;85</Position>
@@ -16,13 +16,13 @@
         <Iteration>
           <Position>807.5;197.5</Position>
           <StyleLien>1</StyleLien>
-          <Titre>pour i allant de 0 à dictionnaire.size()</Titre>
+          <Titre>pour i allant de 0 à dictionnaire.length</Titre>
           <IterationFixe>1</IterationFixe>
           <Enfants>
             <Iteration>
               <Position>807.5;279.5</Position>
               <StyleLien>1</StyleLien>
-              <Titre>pour j allant de 0 à ensembleMots.size()</Titre>
+              <Titre>pour j allant de 0 à ensembleMots.length</Titre>
               <IterationFixe>1</IterationFixe>
               <Enfants>
                 <Condition>

@@ -2,21 +2,21 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>UtilisationDamerau</nom>
-  <date_creation>8/11/2023 09:04</date_creation>
+  <date_creation>19/12/2023 09:15</date_creation>
   <Elements>
     <Action>
       <Position>615;15</Position>
       <StyleLien>2</StyleLien>
       <PreAssertion>mot, distanceMax</PreAssertion>
       <PostAssertion>ensembleMots</PostAssertion>
-      <Titre>Obtenir l'ensemble des mots ayant une
-distance (Damerau-Levenshtein)
+      <Titre>Obtenir l'ensemble des mots ayant une&#xd;
+distance (Damerau-Levenshtein)&#xd;
 de distanceMax ou moins</Titre>
       <DetailsVisible>1</DetailsVisible>
       <DetailsVideVisible>1</DetailsVideVisible>
       <Enfants>
         <Iteration>
-          <Position>863.5;146.5</Position>
+          <Position>870.5;109.5</Position>
           <StyleLien>1</StyleLien>
           <Titre>Pour i de 0 à longueur de mot - 1</Titre>
           <IterationFixe>1</IterationFixe>
@@ -45,7 +45,7 @@ de distanceMax ou moins</Titre>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>?</PreAssertion>
                   <PostAssertion>?</PostAssertion>
-                  <Titre>distance = 
+                  <Titre>distance = &#xd;
 DamerauLev(mot, chaine)</Titre>
                   <DetailsVisible>1</DetailsVisible>
                   <DetailsVideVisible>0</DetailsVideVisible>
@@ -64,7 +64,7 @@ DamerauLev(mot, chaine)</Titre>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
-                          <Titre>Ajouter chaine
+                          <Titre>Ajouter chaine&#xd;
 a ensembleMots</Titre>
                           <DetailsVisible>1</DetailsVisible>
                           <DetailsVideVisible>0</DetailsVideVisible>
@@ -94,8 +94,8 @@ a ensembleMots</Titre>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>?</PreAssertion>
                   <PostAssertion>?</PostAssertion>
-                  <Titre>chaine = mot[:i] + 
-mot[i + 1] + mot[i] 
+                  <Titre>chaine = mot[:i] + &#xd;
+mot[i + 1] + mot[i] &#xd;
 + mot[i + 2:]</Titre>
                   <DetailsVisible>1</DetailsVisible>
                   <DetailsVideVisible>0</DetailsVideVisible>
@@ -106,7 +106,7 @@ mot[i + 1] + mot[i]
                   <StyleLien>1</StyleLien>
                   <PreAssertion>?</PreAssertion>
                   <PostAssertion>?</PostAssertion>
-                  <Titre>distance = 
+                  <Titre>distance = &#xd;
 DamerauLev(mot, chaine)</Titre>
                   <DetailsVisible>1</DetailsVisible>
                   <DetailsVideVisible>0</DetailsVideVisible>
@@ -125,7 +125,7 @@ DamerauLev(mot, chaine)</Titre>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
-                          <Titre>Ajouter chaine
+                          <Titre>Ajouter chaine&#xd;
 a ensembleMots</Titre>
                           <DetailsVisible>1</DetailsVisible>
                           <DetailsVideVisible>0</DetailsVideVisible>
@@ -161,7 +161,7 @@ a ensembleMots</Titre>
                       <StyleLien>1</StyleLien>
                       <PreAssertion>?</PreAssertion>
                       <PostAssertion>?</PostAssertion>
-                      <Titre>chaine = mot[:i] +
+                      <Titre>chaine = mot[:i] +&#xd;
 j + mot[i + 1:]</Titre>
                       <DetailsVisible>1</DetailsVisible>
                       <DetailsVideVisible>0</DetailsVideVisible>
@@ -172,7 +172,7 @@ j + mot[i + 1:]</Titre>
                       <StyleLien>1</StyleLien>
                       <PreAssertion>?</PreAssertion>
                       <PostAssertion>?</PostAssertion>
-                      <Titre>distance = 
+                      <Titre>distance = &#xd;
 DamerauLev(mot, chaine)</Titre>
                       <DetailsVisible>1</DetailsVisible>
                       <DetailsVideVisible>0</DetailsVideVisible>
@@ -191,7 +191,7 @@ DamerauLev(mot, chaine)</Titre>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>?</PostAssertion>
-                              <Titre>Ajouter chaine
+                              <Titre>Ajouter chaine&#xd;
 a ensembleMots</Titre>
                               <DetailsVisible>1</DetailsVisible>
                               <DetailsVideVisible>0</DetailsVideVisible>
@@ -221,7 +221,7 @@ a ensembleMots</Titre>
                       <StyleLien>1</StyleLien>
                       <PreAssertion>?</PreAssertion>
                       <PostAssertion>?</PostAssertion>
-                      <Titre>chaine = mot[:i] + 
+                      <Titre>chaine = mot[:i] + &#xd;
 j + mot[i:]</Titre>
                       <DetailsVisible>1</DetailsVisible>
                       <DetailsVideVisible>0</DetailsVideVisible>
@@ -232,7 +232,7 @@ j + mot[i:]</Titre>
                       <StyleLien>1</StyleLien>
                       <PreAssertion>?</PreAssertion>
                       <PostAssertion>?</PostAssertion>
-                      <Titre>distance = 
+                      <Titre>distance = &#xd;
 DamerauLev(mot, chaine)</Titre>
                       <DetailsVisible>1</DetailsVisible>
                       <DetailsVideVisible>0</DetailsVideVisible>
@@ -251,7 +251,7 @@ DamerauLev(mot, chaine)</Titre>
                               <StyleLien>1</StyleLien>
                               <PreAssertion>?</PreAssertion>
                               <PostAssertion>?</PostAssertion>
-                              <Titre>chaine += ensembleMots
+                              <Titre>chaine += ensembleMots&#xd;
 </Titre>
                               <DetailsVisible>1</DetailsVisible>
                               <DetailsVideVisible>0</DetailsVideVisible>

@@ -1,79 +1,20 @@
-<?xml version="1.0"?>
+<?xml version="1.1"?>
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>obtenirMotLePlusProbable</nom>
-  <date_creation>7/11/2023 15:08</date_creation>
+  <date_creation>18/12/2023 11:37</date_creation>
   <Elements>
     <Action>
-      <Position>11;13</Position>
-      <StyleLien>2</StyleLien>
-      <PreAssertion>mot,
+      <Position>614;19</Position>
+      <StyleLien>1</StyleLien>
+      <PreAssertion>mot,&#xd;
 listeEnsembleMotsExistants</PreAssertion>
       <PostAssertion>motCorrige</PostAssertion>
-      <Titre>Obtenir le mot le plus probable vis à 
+      <Titre>Obtenir le mot le plus probable vis à &#xd;
 vis de la distance d'édition physique</Titre>
       <DetailsVisible>1</DetailsVisible>
       <DetailsVideVisible>1</DetailsVideVisible>
-      <Enfants>
-        <Procedure>
-          <Position>63;179</Position>
-          <StyleLien>1</StyleLien>
-          <PreAssertion>?</PreAssertion>
-          <PostAssertion>listeDistance</PostAssertion>
-          <Titre>ComparerMots
-(mot, i)</Titre>
-          <DetailsVisible>1</DetailsVisible>
-          <DetailsVideVisible>0</DetailsVideVisible>
-          <Enfants/>
-        </Procedure>
-        <Action>
-          <Position>354;184</Position>
-          <StyleLien>2</StyleLien>
-          <PreAssertion>listeDistance</PreAssertion>
-          <PostAssertion>min</PostAssertion>
-          <Titre>Trouver le minimum
-de listeDistance</Titre>
-          <DetailsVisible>1</DetailsVisible>
-          <DetailsVideVisible>1</DetailsVideVisible>
-          <Enfants>
-            <Iteration>
-              <Position>521.5;303.5</Position>
-              <StyleLien>1</StyleLien>
-              <Titre>Pour i de 0 à listeDistance.size</Titre>
-              <IterationFixe>1</IterationFixe>
-              <Enfants>
-                <Condition>
-                  <Position>448.5;388</Position>
-                  <StyleLien>1</StyleLien>
-                  <estUnique>1</estUnique>
-                  <operationsLogiques>
-                    <operation>
-                      <Titre>Si listeDistance[i] > min</Titre>
-                      <Enfants>
-                        <Action>
-                          <Position>466;494</Position>
-                          <StyleLien>1</StyleLien>
-                          <PreAssertion>?</PreAssertion>
-                          <PostAssertion>?</PostAssertion>
-                          <Titre>min = listeDistance[i]</Titre>
-                          <DetailsVisible>1</DetailsVisible>
-                          <DetailsVideVisible>0</DetailsVideVisible>
-                          <Enfants/>
-                        </Action>
-                      </Enfants>
-                    </operation>
-                    <operation>
-                      <Titre>Sinon</Titre>
-                      <Enfants/>
-                    </operation>
-                  </operationsLogiques>
-                </Condition>
-              </Enfants>
-            </Iteration>
-          </Enfants>
-        </Action>
-      </Enfants>
+      <Enfants/>
     </Action>
   </Elements>
-  <Dictionary/>
 </Algorithme>

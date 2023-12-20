@@ -2,12 +2,12 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>algoGeneral</nom>
-  <date_creation>17/11/2023 14:45</date_creation>
+  <date_creation>19/12/2023 14:40</date_creation>
   <Elements>
     <Action>
       <Position>654;44</Position>
       <StyleLien>2</StyleLien>
-      <PreAssertion>mot</PreAssertion>
+      <PreAssertion>mot, matrice, dictionnaireJSON</PreAssertion>
       <PostAssertion>motCorrige</PostAssertion>
       <Titre>Algorithme général de correction de mots</Titre>
       <DetailsVisible>1</DetailsVisible>
@@ -26,13 +26,13 @@ ensembleMots</PostAssertion>
           <Enfants/>
         </Action>
         <Action>
-          <Position>298;202</Position>
+          <Position>193;252</Position>
           <StyleLien>1</StyleLien>
-          <PreAssertion>mot</PreAssertion>
+          <PreAssertion>mot, dictionnaireJSON</PreAssertion>
           <PostAssertion>listeMotAvecDamerauLevenshtein</PostAssertion>
-          <Titre>Obtenir l'ensemble des 
-mots ayant une distance
-(Damerau-Levenshtein) de 
+          <Titre>Obtenir l'ensemble des &#xd;
+mots ayant une distance&#xd;
+(Damerau-Levenshtein) de &#xd;
 la longueur de mot / 4 + 1</Titre>
           <DetailsVisible>1</DetailsVisible>
           <DetailsVideVisible>1</DetailsVideVisible>
@@ -48,7 +48,7 @@ la longueur de mot / 4 + 1</Titre>
           <DetailsVideVisible>0</DetailsVideVisible>
           <Enfants>
             <Action>
-              <Position>1455;308</Position>
+              <Position>1542;277</Position>
               <StyleLien>1</StyleLien>
               <PreAssertion>?</PreAssertion>
               <PostAssertion>?</PostAssertion>
@@ -57,23 +57,31 @@ la longueur de mot / 4 + 1</Titre>
               <DetailsVideVisible>0</DetailsVideVisible>
               <Enfants/>
             </Action>
-            <Sortie>
-              <Position>1653;320</Position>
-            </Sortie>
           </Enfants>
         </Action>
         <Action>
-          <Position>610;383</Position>
-          <StyleLien>1</StyleLien>
-          <PreAssertion>mot</PreAssertion>
-          <PostAssertion>listeEnsembleMotClavier</PostAssertion>
-          <Titre>obtenir l'ensemble des mots proches selon les lettres du clavier avec au plus 2 erreurs</Titre>
+          <Position>505;336</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>mot, matrice, dictionnaireJSON</PreAssertion>
+          <PostAssertion>listePertinante</PostAssertion>
+          <Titre>obtenir le mot le plus probable par rapport à la saisie clavier avec au plus 2 erreurs</Titre>
           <DetailsVisible>1</DetailsVisible>
           <DetailsVideVisible>1</DetailsVideVisible>
-          <Enfants/>
+          <Enfants>
+            <Procedure>
+              <Position>535;428</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>mot, matrice, dictionnaireJSON</PreAssertion>
+              <PostAssertion>listePertinante</PostAssertion>
+              <Titre>corrigerClavier</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants/>
+            </Procedure>
+          </Enfants>
         </Action>
         <Condition>
-          <Position>1215.5;471</Position>
+          <Position>1313.5;367</Position>
           <StyleLien>0</StyleLien>
           <estUnique>0</estUnique>
           <operationsLogiques>
@@ -81,18 +89,18 @@ la longueur de mot / 4 + 1</Titre>
               <Titre>mot avec distance = 0 existe</Titre>
               <Enfants>
                 <Action>
-                  <Position>954;576</Position>
+                  <Position>1087;478</Position>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>?</PreAssertion>
                   <PostAssertion>?</PostAssertion>
                   <Titre>Pas de modification 
-motCorrige = mot</Titre>
+motLePlusPertinant = mot</Titre>
                   <DetailsVisible>1</DetailsVisible>
                   <DetailsVideVisible>0</DetailsVideVisible>
                   <Enfants/>
                 </Action>
                 <Sortie>
-                  <Position>1173;592</Position>
+                  <Position>1328;488</Position>
                 </Sortie>
               </Enfants>
             </operation>
@@ -100,16 +108,16 @@ motCorrige = mot</Titre>
               <Titre>Sinon</Titre>
               <Enfants>
                 <Condition>
-                  <Position>1256.5;605</Position>
+                  <Position>1463.5;482</Position>
                   <StyleLien>0</StyleLien>
                   <estUnique>0</estUnique>
                   <operationsLogiques>
                     <operation>
-                      <Titre>mot avec distance &lt;=
+                      <Titre>mot avec distance &lt;=&#xd;
 (mot/4+1) existe</Titre>
                       <Enfants>
                         <Procedure>
-                          <Position>1009;755</Position>
+                          <Position>1313;580</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
@@ -119,7 +127,7 @@ motCorrige = mot</Titre>
                           <Enfants/>
                         </Procedure>
                         <Sortie>
-                          <Position>1259;775</Position>
+                          <Position>1557;596</Position>
                         </Sortie>
                       </Enfants>
                     </operation>
@@ -127,11 +135,11 @@ motCorrige = mot</Titre>
                       <Titre>Sinon</Titre>
                       <Enfants>
                         <Action>
-                          <Position>1322;744</Position>
+                          <Position>1622;586</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>?</PreAssertion>
                           <PostAssertion>?</PostAssertion>
-                          <Titre>Pas de modification 
+                          <Titre>Pas de modification &#xd;
 motCorrige = mot</Titre>
                           <DetailsVisible>1</DetailsVisible>
                           <DetailsVideVisible>0</DetailsVideVisible>
@@ -146,11 +154,11 @@ motCorrige = mot</Titre>
           </operationsLogiques>
         </Condition>
         <Action>
-          <Position>841;204</Position>
+          <Position>841;196</Position>
           <StyleLien>1</StyleLien>
-          <PreAssertion>listeEnsembleMotClavier,
+          <PreAssertion>listePertinante,
 listeMotAvecDamerauLevenshtein</PreAssertion>
-          <PostAssertion>motLePlusPertinents</PostAssertion>
+          <PostAssertion>motLesPlusPertinants</PostAssertion>
           <Titre>Verifier cohérence entre damarau-levenshtein et saisie clavier</Titre>
           <DetailsVisible>1</DetailsVisible>
           <DetailsVideVisible>1</DetailsVideVisible>
