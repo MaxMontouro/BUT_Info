@@ -58,3 +58,7 @@ FROM VILLE v;
 SELECT NomVille FROM VILLE v
 WHERE (v.RectVille.pt_Min.X - v.RectVille.pt_Max.X) > 10
 OR (v.RectVille.pt_Min.Y - v.RectVille.pt_Max.Y) > 10;
+
+/** PARTIE 2 **/
+
+/*Question 1*/
