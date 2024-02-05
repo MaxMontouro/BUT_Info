@@ -25,4 +25,4 @@ void setPlaqueImat(string maPlaque){
 void Individu::getMonPilote(){
     return monPilote.toString();
 }
-string setMonPilote(*);
+void setMonPilote(){}

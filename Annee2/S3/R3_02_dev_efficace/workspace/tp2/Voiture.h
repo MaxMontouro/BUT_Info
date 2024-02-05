@@ -19,8 +19,8 @@ class Individu{
         string getPlaqueImat();
         void setPlaqueImat(string);
         string getMonPilote();
-        void setMonPilote(*);
+        void setMonPilote();
         //METHODES USUELLES
         virtual string toString();
-}
+};
 #endif // CLASSE VOITURE_H
