@@ -7,9 +7,14 @@
     <title>Exercice 7 </title>
     <script>
         function afficher_multiplication(){
-            var multiplication = document.getElementById("multiplication").value;
-            var result = eval(multiplication);
-            document.getElementById("result").value = result;
+            try{
+                var multiplication = document.getElementById("multiplication").value;
+                var result = eval(multiplication);
+                document.getElementById("result").value = result;
+            }
+            catch(err){
+                alert("Erreur : " + err.message);
+            }
         }
     </script>
 </head>

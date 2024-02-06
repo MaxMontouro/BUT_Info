@@ -5,8 +5,7 @@ document.getElementById("filter").placeholder = "Recherche un item dans la table
 
 
 
-function masqueeEltNonOrdonnee()
-{
+function masqueeEltNonOrdonnee(){
     let element = document.getElementById("items");
     element.style.display = "none"
 }
@@ -143,6 +142,6 @@ lesdonnees =
     }
 ]
 
-function exploitation(){
+/*function exploitation(){
     
-}
+}*/
