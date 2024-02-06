@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 7 </title>
+    <script>
+        function afficher_multiplication(){
+            var multiplication = document.getElementById("multiplication").value;
+            var result = eval(multiplication);
+            document.getElementById("result").value = result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Écriture d'une fonction simple</h1>
+    <form id="monForm">
+        <label for="multiplication">Table de multiplication : </label>
+        <input type="text" id="multiplication" name="multiplication" required>
+        <input type="button" value="=" onclick="afficher_multiplication()">
+        <label for="result"></label>
+        <input id="result"></input>
+    </form>
+</body>
+</html>

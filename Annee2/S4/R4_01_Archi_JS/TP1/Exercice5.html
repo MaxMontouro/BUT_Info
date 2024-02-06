@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 5 </title>
+    <script>
+        /*function afficher_jours(){
+            var mois = prompt("Entrez le mois : ");
+            var annee = prompt("Entrez l'année : ");
+
+            if(mois == 1 || mois == 3 || mois == 5 || mois == 7 || mois == 8 || mois == 10 || mois == 12){
+                alert("Le mois " + mois + " de l'année " + annee + " a 31 jours");
+            }else if(mois === 2 ){
+                if(Number.isInteger(annee/4)){
+                    alert("Le mois " + mois + " de l'année " + annee + " a 29 jours");
+                }
+                else{
+                    alert("Le mois " + mois + " de l'année " + annee + " a 28 jours");
+                }
+            }else{
+                alert("Le mois " + mois + " de l'année " + annee + " a 30 jours");
+            }
+        }*/
+        function afficher_jours() {
+            var mois = prompt("Entrez le mois : ");
+            var annee = prompt("Entrez l'année : ");
+            var nombreJours = new Date(annee, mois, 0).getDate();
+            alert("Le nombre de jours dans le mois " + mois + " de l'année " + annee + " est : " + nombreJours);
+        }
+    </script>
+</head>
+<body>
+    <h1>Écriture d'une fonction simple</h1>
+    <form id="monForm">
+        <input type="button" value="Lancer la fonction" onclick="afficher_jours()">
+</body>
+</html>

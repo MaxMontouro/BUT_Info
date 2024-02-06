@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 4 </title>
+    <script>
+        function afficher_rectangle(){
+            var longueur = document.getElementById("longueur").value;
+            var largeur = document.getElementById("largeur").value;
+
+            //alert([longeur, largeur]); EXERCICE 1
+            //alert("la surface du rectangle est : " + longueur * largeur + " m²"); //EXERCICE 2
+            alert("le perimetre du rectangle est : " + (longueur * 2 + largeur * 2) + " m");// EXERCICE 3
+        }
+    </script>
+</head>
+<body>
+    <h1>Écriture d'une fonction simple</h1>
+    <form id="monForm">
+        <label for="longueur"> longueur : </label>
+        <input type="text" id="longueur" name="longueur" required>
+        <br>
+        <label for="largeur"> largeur : </label>
+        <input type="text" id="largeur" name="largeur" required>
+        <br>
+        <input type="button" value="Lancer la fonction" onclick="afficher_rectangle()">
+    </form>
+</body>
+</html>
