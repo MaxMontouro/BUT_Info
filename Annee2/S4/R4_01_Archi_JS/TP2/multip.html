@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2</title>
+    <script>
+
+        function verification(){
+            var multiplication1 = document.getElementById("multiplication1").value;
+            var multiplication2 = document.getElementById("multiplication2").value;
+            var multiplication3 = document.getElementById("multiplication3").value;
+            var multiplication4 = document.getElementById("multiplication4").value;
+            var result = document.getElementById("result");
+            var cpt = 0;
+            if(multiplication1 === "6"){
+                cpt++;
+            }
+            if(multiplication2 === "42"){
+                cpt++;
+            }
+            if(multiplication3 === "16"){
+                cpt++;
+            }
+            if(multiplication4 === "15"){
+                cpt++;
+            }
+
+            //Résultat
+            if(cpt == 4){
+                result.innerHTML = "Bravo, vous avez tout juste";
+            }else{
+                result.innerHTML = "Vous avez " + cpt + " bonnes réponses... Correction ? ";
+                result.innerHTML += "<input type='button' value='Correction' onclick='correction()'>";
+                result.innerHTML += "<input type='button' value='Finir' onclick='recommencer()'>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>TP2</h1>
+    <form id="monForm">
+        <label for="multiplication1"> 3*2 </label>
+        <input type="text" id="multiplication1"><br>
+        <label for="multiplication2"> 6*7 </label>
+        <input type="text" id="multiplication2"><br>
+        <label for="multiplication3"> 4*4 </label>
+        <input type="text" id="multiplication3"><br>
+        <label for="multiplication4"> 3*5 </label>
+        <input type="text" id="multiplication4"><br>
+        <input type="button" value="Vérifier les résultats" onclick="verification()">
+    </form>
+    <div id="result"></div>   
+    <div id="correction()"></div>
+    <div id></div>
+</body>
+</html>

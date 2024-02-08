@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2</title>
+    <script>
+        function sommeFor(){
+            var nombre = document.getElementById("nombre").value;
+            nombre = parseInt(nombre, 10);
+            console.log(typeof nombre);
+            if(Number.isInteger(nombre) === true){
+                var result = 0;
+                for (let i = 0; i <= nombre; i++) {
+                    result += i;
+                }
+                document.getElementById("result").innerHTML = result;
+            }else{
+                document.getElementById("result").innerHTML = "Somme indéfinie";
+            }
+        }
+
+        function sommeRec(nombre) {
+            if (Number.isInteger(nombre)) {
+                var result = calculateSum(nombre);
+                document.getElementById("result").innerHTML = result;
+            } else {
+                document.getElementById("result").innerHTML = "Somme indéfinie";
+            }
+        }
+
+        function calculateSum(n) {
+            if (n === 0) {
+                return 0; // Base case: sum of integers from 1 to 0 is 0
+            } else {
+                return n + calculateSum(n - 1); // Recursive case: add n to sum of integers from 1 to n-1
+            }
+        }
+
+        function sommePrompt(){
+            var nombre = prompt("Entrez un nombre entier : ");
+            nombre = parseInt(nombre, 10);
+            if(typeof nombre !== "number"){
+                    nombre = 0;
+                    document.getElementById("result").innerHTML = "Somme indéfinie";
+            }
+            else{
+                sommeRec(nombre);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>TP2</h1>
+    <form id="monForm">
+        <input type="button" value="Lancer la fonction" onclick="sommePrompt()">
+    </form>
+    <div id="result"></div>   
+</body>
+</html>

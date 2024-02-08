@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2</title>
+    <script>
+        var tableau = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+        
+        function afficherJoursSemaine() {
+            var result = "";
+            for (let i = 0; i < tableau.length; i++) {
+                result += "Jour " + i +" : " + tableau[i] + "<br>";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+
+        
+
+        function sommeRec(){
+            var nombre = document.getElementById("nombre").value;
+            if(nombre.isInteger){
+                var result = 0;
+                for (let i = 0; i <= nombre; i++) {
+                    result += i;
+                }
+                document.getElementById("result").innerHTML = result;
+            }else{
+                document.getElementById("result").innerHTML = "Somme indéfinie";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1>TP2</h1>
+    <p>Les Jours de la semaine : </p>
+    <div id="result"></div> 
+    <script>
+        afficherJoursSemaine();
+    </script>   
+</body>
+</html>
