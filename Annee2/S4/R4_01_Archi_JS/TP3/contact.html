@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <script>
+        function valeurAleatoire(){
+            var bouton = document.getElementById("valeurAleatoire");
+            var nbr = Math.floor(Math.random()*1000);
+            bouton.value = nbr;
+        }
+
+    </script>
+</head>
+<body>
+    <h1>
+        Formulaire de contact
+    </h1>
+    <form>
+        <label for="email">Entrez Email: </label><br>
+        <input type="email" required><br><br>
+        <label for="password"> Entrez votre mot de passe</label><br>
+        <input type="password" requierd><br><br>
+        <label for="sujet"></label>
+        <select name="selection" id="selection" required>
+            <option value="Smart Buidling">Smart Building</option>
+            <option value="Energy Management">Energy Management</option>
+            <option value="Ontology">Ontology</option>
+            <option value="Micro Grid">Micro Grid</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+        <textarea name="" id="" cols="30" rows="10"></textarea><br>
+        <label for="valeurAleatoire"></label>
+        <input type="text" id="valeurAleatoire"><br>
+        <input type="button" value="Send">
+    </form>
+    <script>
+        valeurAleatoire();
+    </script>
+</body>
+</html>
