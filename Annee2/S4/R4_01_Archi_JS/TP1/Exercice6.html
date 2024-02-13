@@ -7,11 +7,17 @@
     <title>Exercice 6 </title>
     <script>
         function afficher_table_multiplication(){
-            var multiplication = document.getElementById("multiplication").value;
+            var multiplication = parseInt(document.getElementById("multiplication").value);
             var result = "";
-            for (let i = 1; i <= 10; i++) {
-                result += multiplication + " x " + i + " = " + multiplication * i + "<br>";
+            if(!Number.isInteger(multiplication)){
+                result = "Veuillez entrer un nombre entier";
             }
+            else{
+                
+                for (let i = 1; i <= 10; i++) {
+                    result += multiplication + " x " + i + " = " + multiplication * i + "<br>";
+                }
+            } 
             document.getElementById("result").innerHTML = result;
         }
     </script>
@@ -20,9 +26,9 @@
     <h1>Écriture d'une fonction simple</h1>
     <form id="monForm">
         <label for="multiplication">Table de multiplication : </label>
-        <input type="text" id="multiplication" name="multiplication" required>
+        <input type="text" id="multiplication" name="multiplication" required><br><br>
         <input type="button" value="Lancer la fonction" onclick="afficher_table_multiplication()">
-    </form>
-    <div id="result"></div>
+    </form><br>
+    <div id="result" style="text-align: center;"></div>
 </body>
 </html>

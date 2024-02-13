@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Écriture d'une fonction avec arguments et des variables globales</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <i class="bi bi-nintendo-switch"></i>
+        <script>
+            var a = 3;
+            var b=2;
+            var tab = [-2,1,4,-5,1];
+
+            function multiplication(y, x=8){
+                return y * x;
+            };
+
+            function afficher(){
+                var resultat = document.getElementById("resultat");
+                var afficher="";
+                afficher+= " Sans la valeur par défaut : " + multiplication(a, b);
+                afficher += "<br>";
+                afficher +=" Avec la valeur par défaut : "+ multiplication(a);
+                afficher += "<br>";
+                afficher +=" Avec un tableau : "+ multiplication2(a);
+                afficher += "<br>";
+                afficher +=" Avec un tableau trié : "+ tri(tab);
+
+                resultat.innerHTML = afficher;
+            };
+
+            function multiplication2(x){
+                var result =" <br> ";
+                for (let i = 0; i < tab.length; i++) {
+                    result += multiplication(x, tab[i]) + " avec l'indice " + i + "<br>";
+                }
+                return result;
+            }
+
+            function tri(tableau){
+                return tableau.sort(function(a, b) {
+                    return a - b;
+                });
+            }
+            
+            function afficher2(x=8){
+                var resultat = document.getElementById("resultat");
+                var afficher="";
+                for (let i = 0; i < tab.length; i++) {
+                    afficher += multiplication(x, tab[i]) + " avec l'indice " + i + "<br>";
+                }
+                resultat.innerHTML = afficher;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Écriture d'une fonction avec arguments</h1>
+        <p>Cliquez sur le bouton pour lancer la fonction: 
+            <button onmouseenter="afficher()" class="bi bi-nintendo-switch">Lancer la fonction</button>
+            <button ondblclick="afficher2()">Lancer la fonction tableau</button>
+        </p>
+        <div id="resultat"></div>
+    </body>
+</html>
