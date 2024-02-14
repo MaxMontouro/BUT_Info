@@ -1,0 +1,43 @@
+<html>
+    <head>
+
+    </head>
+<body>
+
+</body>
+    <h1>EXERCICE 5</h1>
+
+
+
+    <select id="couleurMenu">
+        <option value="gray">Gris</option>
+        <option value="blue" >Bleu</option>
+        <option value="green " >Vert</option>
+    </select>
+
+    <button type= "button" onclick="test2()">Go</button></p>
+
+    <script type="text/javascript">
+        /*
+        function test(){
+            var couleur = prompt("Choisir une couleur de fond");
+
+            document.body.style.background = couleur; 
+
+        }
+        */
+
+
+        function test2(){
+            var menu = document.getElementById("couleurMenu").value;
+            // console.log(menu);
+            document.body.style.backgroundColor = menu;
+            
+        }
+        const input = document.querySelector("#couleurMenu");
+        input.addEventListener("change", test2);
+    </script>
+</html>
+
+
+

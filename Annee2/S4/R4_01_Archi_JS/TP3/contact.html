@@ -5,23 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
     <script>
+
+        var cpt = 0;
+        var nbrAleatoire = Math.floor(Math.random()*(10)+1);
+
         function valeurAleatoire(){
             var bouton = document.getElementById("valeurAleatoire");
-            var nbr = Math.floor(Math.random()*1000);
+            var nbr = Math.floor(Math.random()*10+1);
             bouton.value = nbr;
         }
 
+        function verifierSaisie(){
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var sujet = document.getElementById("selection").value;
+            var message = document.getElementById("message").value;
+
+            if(email == "" || password == "" || sujet == "" || message == ""){
+                document.getElementById("monForm").style.color = "red";
+            }
+        }
+
+        function estPasRobot(){
+            var nbrSaisie = document.getElementById("valeurAleatoire").value;
+
+            if(nbrSaisie == nbrAleatoire){
+                return true;
+            }
+
+            if(nbrSaisie > nbrAleatoire){
+                cpt++;
+                alert("La valeur saisie est plus grande que la valeur aléatoire ! il vous reste " + (5-cpt) + " essais.");
+            }
+            else{
+                cpt++;
+                alert("La valeur saisie est plus petite que la valeur aléatoire ! il vous reste " + (5-cpt) + " essais.");
+            }
+
+            if(cpt > 5){
+                return false;
+            }
+            
+        }
+
+        function verifierInformation(){
+            var resultat = "";
+
+            if(navigator.javaEnabled()){
+                    resultat += "Java est activé !<br>";
+            }
+            else{
+                resultat += "Java n'est pas activé !<br>";
+            }                
+            if(navigator.language !== "fr"){
+                resultat += "La langue de votre navigateur n'est le français !<br>";
+            }
+            else{
+                resultat += "La langue de votre navigateur est le français !<br>";
+            }
+            if(navigator.appName !== "chrome"){
+                resultat += "Votre navigateur n'est pas Firefox !<br>";
+            }
+            else{
+                resultat += "Votre navigateur est Firefox !<br>";
+            }
+
+            document.getElementById("resultat").innerHTML = resultat;
+        }
+
+       function valide(){
+        if(estPasRobot() == true){
+            verifierInformation();
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            
+            if(email !== "" && password.length > 0){
+                if(email.includes("@") && email.includes(".")){
+                    alert("Email valide !");
+                    if(document.getElementById("selection").value == "Other"){
+                        var nvxSujet = prompt("Entrez un autre sujet : ");
+                        document.getElementById("selection").value = nvxSujet;
+                    }
+                }
+                else{
+                    alert("Email invalide !");
+                }                
+            }
+            else{
+                alert("Veuillez remplir tous les champs !");
+            }
+
+            }
+            else if(cpt == 5){
+                alert("Vous avez dépassé le nombre d'essais autorisé !");
+                document.navigator.href = "contact.html";
+            }
+       }
     </script>
 </head>
 <body>
     <h1>
         Formulaire de contact
     </h1>
-    <form>
+    <form id="monForm">
         <label for="email">Entrez Email: </label><br>
-        <input type="email" required><br><br>
+        <input type="email" id="email" placeholder="aaaaa@aaaaa.aa" required><br><br>
         <label for="password"> Entrez votre mot de passe</label><br>
-        <input type="password" requierd><br><br>
+        <input type="password" id="password" placeholder="*******" required><br><br>
         <label for="sujet"></label>
         <select name="selection" id="selection" required>
             <option value="Smart Buidling">Smart Building</option>
@@ -30,11 +121,12 @@
             <option value="Micro Grid">Micro Grid</option>
             <option value="Other">Other</option>
         </select><br><br>
-        <textarea name="" id="" cols="30" rows="10"></textarea><br>
-        <label for="valeurAleatoire"></label>
-        <input type="text" id="valeurAleatoire"><br>
-        <input type="button" value="Send">
+        <textarea name="" id="" cols="30" rows="10" placeholder="Entrez un message d'informations ici :"></textarea><br>
+        <label for="valeurAleatoire"></label><br>
+        <input type="text" id="valeurAleatoire"><br><br>
+        <input type="button" value="Send" onclick="valide()"><br>
     </form>
+    <div id="resultat"></div>
     <script>
         valeurAleatoire();
     </script>

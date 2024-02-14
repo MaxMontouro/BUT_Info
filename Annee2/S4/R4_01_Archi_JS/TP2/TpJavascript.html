@@ -8,11 +8,13 @@
         var tableau = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
         
         function afficherJoursSemaine() {
-            var result = "";
+            var result = "<p>";
+            var divCreer = document.createElement("p");
             for (let i = 0; i < tableau.length; i++) {
-                result += "Jour " + i +" : " + tableau[i] + "<br>";
-            }
-            document.getElementById("result").innerHTML = result;
+                var doc = document.createElement("p");
+                doc.textContent = "Jour " + (i+1) +" : " + tableau[i];
+                document.body.appendChild(doc);
+            }                
         }
 
         
