@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Écriture d'une fonction avec arguments et des variables globales</title>
+        <meta charset="UTF-8">
+        <script>
+            function monMax(a,b){
+                return a > b ? a : b;
+            }
+
+            function calculer(a,b){
+                if(typeof a === "number" && typeof b === "number"){
+                    console.log("le max est : " + monMax(a,b))
+                }
+                else{
+                    return "Erreur";
+                }
+            }
+
+            function calculer2(a,b){
+                a = parseInt(a);
+                b = parseInt(b);
+
+                if(isNaN(a) || isNaN(b)){
+                    document.getElementById("resultat").innerHTML = "Erreur";
+                }
+                else{
+                    document.getElementById("resultat").innerHTML = "le max est : " + monMax(a,b);
+                }
+            }
+
+            function max4(a,b,c,d){
+                return monMax(monMax(a,b), monMax(c,d));
+            }
+
+            function max4_2(a,b,c,d){
+                return Math.max(a,b,c,d);
+            }
+
+            function max8(a,b,c,d,e,f,g,h){
+                return monMax(max4(a,b,c,d), max4(e,f,g,h));
+            }
+
+            function nombreAleatoire(a, b) {
+                // Vérifier que a et b sont des entiers inférieurs à 100
+                if (!Number.isInteger(a) || !Number.isInteger(b) || a < 0 || a >= 100 || b < 0 || b >= 100) {
+                    return "Les valeurs de a et b doivent être des entiers inférieurs à 100.";
+                }
+
+                // Échanger a et b si a est supérieur à b
+                if (a > b) {
+                    const temp = a;
+                    a = b;
+                    b = temp;
+                }
+
+                // Générer un nombre aléatoire entre a et b inclus
+                return Math.floor(Math.random() * (b - a + 1)) + a;
+            }
+
+            function gagner(){
+                var saise = document.getElementById("saisie").value;
+                var nombre = nombreAleatoire(0, 10);
+                if(saise == nombre){
+                    document.getElementById("resultatGagner").innerHTML = "Gagné";
+                }
+                else{
+                    document.getElementById("resultatGagner").innerHTML = "Perdu, le nombre était : " + nombre;
+                }
+            }
+
+            var aleatoire = nombreAleatoire(0, 10);
+            function attendResultat(){
+                var saise = document.getElementById("saisie").value;
+                if(saise == aleatoire){
+                    document.getElementById("resultatGagner").innerHTML = "Gagné";
+                }
+                else{
+                    document.getElementById("resultatGagner").innerHTML = "Perdu, le nombre était : " + aleatoire;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Écriture d'une fonction avec arguments</h1>
+        <form>
+            <label for="saisie1">Entrée une valeur 1</label>
+            <input type="text" id="saisie1" name="saisie1" placeholder="un nombre entier"><br>
+            <label for="saisie2">Entrée une valeur 2</label>
+            <input type="text" id="saisie2" name="saisie2" placeholder="une nombre entier"><br>
+            <input type="button" value="Calculer" onclick="calculer2(saisie1.value, saisie2.value)">          
+        </form>
+        <h1>Nombre aléatoire</h1>
+        <div id="resultat"></div>
+        <form>
+            <label for="saisie">Entrée une valeur</label>
+            <input type="text" id="saisie" name="saisie" placeholder="un nombre entier"><br>
+            <input type="button" value="Gagner" onclick="gagner()">
+        </form>
+        <div id="resultatGagner"></div>
+    </body>
+</html>

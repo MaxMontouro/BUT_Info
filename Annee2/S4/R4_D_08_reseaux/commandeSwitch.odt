@@ -1,0 +1,105 @@
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+Pour S1:
+
+//CREATION DES VLANS
+
+vlan/create 10
+vlan/create 20
+vlan/create 30
+
+#AFFECTATION DES PORTS
+
+port/setvlan 3 10
+port/setvlan 4 10
+
+port/setvlan 5 20
+port/setvlan 6 20
+
+port/setvlan 7 30
+port/setvlan 8 30
+
+//CONFIG TRUNK 
+
+vlan/addport 10 1
+vlan/addport 10 2
+
+vlan/addport 20 1
+vlan/addport 20 2
+
+vlan/addport 30 1
+vlan/addport 30 2
+
+Pour S2:
+
+vlan/create 10
+vlan/create 20
+vlan/create 30
+
+
+port/setvlan 3 10
+port/setvlan 4 10
+
+port/setvlan 5 20
+port/setvlan 6 20
+
+port/setvlan 7 30
+port/setvlan 8 30
+
+vlan/addport 10 1
+vlan/addport 10 2
+
+vlan/addport 20 1
+vlan/addport 20 2
+
+vlan/addport 30 1
+vlan/addport 30 2
+
+Pour S3:
+
+vlan/create 10
+vlan/create 20
+vlan/create 30
+
+port/setvlan 3 10
+port/setvlan 4 10
+
+port/setvlan 5 20
+port/setvlan 6 20
+
+port/setvlan 7 30
+port/setvlan 8 30
+
+vlan/addport 10 1
+vlan/addport 10 2
+
+vlan/addport 20 1
+vlan/addport 20 2
+
+vlan/addport 30 1
+vlan/addport 30 2
+
+
+dans la machine sniffer:
+
+//Creation Vlan
+
+vconfig add eth0 10
+vconfig add eth0 20
+vconfig add eth0 30
+
+
+//Activation ds interfaces et sous interfaces
+
+ifconfig eth0 up
+ifconfig eth0.10 up
+ifconfig eth0.20 up
+ifconfig eth0.30 up
+
+
+// affectation des adresses IP au sous interface
+
+ifconfig eth0.10 172.17.10.254/24
+ifconfig eth0.20 172.17.20.254/24
+ifconfig eth0.30 172.17.30.254/24
+

@@ -79,13 +79,20 @@
 
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
+            var sujet = document.getElementById("selection").value;
             
             if(email !== "" && password.length > 0){
                 if(email.includes("@") && email.includes(".")){
-                    alert("Email valide !");
                     if(document.getElementById("selection").value == "Other"){
-                        var nvxSujet = prompt("Entrez un autre sujet : ");
-                        document.getElementById("selection").value = nvxSujet;
+                        ajouterElt();
+                    }
+                    else{
+                        var html = document.getElementsByTagName("html")[0];
+                        var html_childs = document.getElementsByTagName("html")[0].childsNodes;
+                        for(var i=0; i < html_childs.length ;i++){
+                            html.removeChild(html_childs[i]);
+                        }
+                        afficherElement(email, sujet);
                     }
                 }
                 else{
@@ -99,9 +106,36 @@
             }
             else if(cpt == 5){
                 alert("Vous avez dépassé le nombre d'essais autorisé !");
-                document.navigator.href = "contact.html";
+                document.location.href = "contact.html";
             }
        }
+
+       function ajouterElt(){
+           var selection = document.getElementById("selection").value;
+           if(selection == "Other"){
+               var autre = prompt("Entrez un autre sujet : ");
+               document.getElementById("selection").innerHTML += "<option value='" + autre + "'>" + autre + "</option>";
+
+                /*var pass = false;
+                var saisie = "";
+                        do
+                        {
+                            if (pass) alert("La valeur est incorrecte. Elle ne doit comporter que des lettres.");
+                            saisie = prompt("Entrer la nouvelle valeur :");
+                            if (saisie == null) return false;
+                            pass = true;
+                        }
+                        while (saisie.match(/[^a-z]/i) && saisie != "");
+
+                        saisie.options[saisie.options.length -1] = new Option(saisie, saisie, true, true);
+                */
+           }
+       }
+
+        function afficherElement(email, selection){
+            document.appendChild("resultat");
+            document.getElementById("resultat").innerHTML = "Email : " + email + "<br> Sujet : " + selection + "<br>";
+        }
     </script>
 </head>
 <body>
@@ -114,7 +148,7 @@
         <label for="password"> Entrez votre mot de passe</label><br>
         <input type="password" id="password" placeholder="*******" required><br><br>
         <label for="sujet"></label>
-        <select name="selection" id="selection" required>
+        <select name="selection" id="selection" onchange="ajouterElt()" required>
             <option value="Smart Buidling">Smart Building</option>
             <option value="Energy Management">Energy Management</option>
             <option value="Ontology">Ontology</option>
