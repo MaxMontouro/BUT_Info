@@ -62,3 +62,57 @@ OR (v.RectVille.pt_Min.Y - v.RectVille.pt_Max.Y) > 10;
 /** PARTIE 2 **/
 
 /*Question 1*/
+
+CREATE OR REPLACE TYPE Metadonnee_type AS OBJECT
+(   Au VARCHAR2(50) NOT NULL,
+    Geo VARCHAR2(50) NOT NULL,
+    D VARCHAR2(50) NOT NULL);
+
+CREATE OR REPLACE TYPE Lien_type AS OBJECT
+( URL VARCHAR2(50),
+    RELATION VARCHAR2(50));
+
+CREATE OR REPLACE LienS_type AS TABLE OF Lien_type;
+
+CREATE TABLE TWITTER (
+    URL VARCHAR2(50) NOT NULL,
+    Texte VARCHAR2(50) NOT NULL,
+    objetMIME VARCHAR2(50) NOT NULL,
+    D/H DATE NOT NULL,
+    Metadonnee Metadonnee_type NOT NULL,
+    LienS LienS_type NOT NULL,
+    PRIMARY KEY (URL))
+    NESTED TABLE LienS STORE AS LienS_type ;
+
+/*Question 2*/
+
+INSERT INTO TWITTER VALUES ("Ma-photo-1", "Photo prise lors d'une soirée avec des amis", "image/jpeg", "12/05/09", Metadonnee_type("X. Tintin", "43.8345-0.3516", "03/04/08"), LienS_type(Lien_type("Ma-photo-2", "theme")));
+
+/*Question 3*/
+
+SELECT t.URL, t.Texte, t.objetMIME
+FROM TWITTER t
+WHERE t.Metadonnee.Au = "%X. Tintin";
+
+/*Question 4*/
+
+UPDATE TWITTER t, TABLE(t.LienS) l l.RELATION = "similaire"
+WHERE t.URL = "Ma-photo-1";
+
+/*Question 5*/
+
+UPDATE TWITTER t, TABLE(t.LienS) l SET L = Lien_type("Chanson12", "reponse")
+TYPE
+WHERE t.URL = "Photo-belle";
+
+
+/*Question 6*/
+
+SELECT l.URL, l.RELATION
+FROM TWITTER t, TABLE(t.LienS) l
+WHERE t.URL = "Ma-photo-1";
+
+/*Question 7*/
+
+SELECT * FROM TWITTER t
+WHERE T.Texte LIKE "Master%";
