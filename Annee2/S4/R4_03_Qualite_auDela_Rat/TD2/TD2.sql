@@ -5,8 +5,8 @@ TD2 Qualité au dela du rationnel
 /*Question 1*/
 
 CREATE OR REPLACE TYPE B_Point AS OBJECT
-(   x NUMBER NOT NULL, 
-    y NUMBER NOT NULL);
+(   x NUMBER, 
+    y NUMBER);
 
 /*Question 2*/
 
@@ -116,3 +116,79 @@ WHERE t.URL = "Ma-photo-1";
 
 SELECT * FROM TWITTER t
 WHERE T.Texte LIKE "Master%";
+
+
+
+/*  TD  3 */
+/* ENTRAINEMENT */
+
+
+CREATE OR REPLACE TYPE POINT2 AS OBJECT(
+  X NUMBER,
+  Y NUMBER,
+  MEMBER PROCEDURE MULTI_X_NB( nb NUMBER),
+  MEMBER FUNCTION RenvoyerYsur2 Return Number
+  );
+  
+CREATE OR REPLACE TYPE Body POINT2 AS
+  MEMBER PROCEDURE MULTI_X_NB(nb NUMBER)
+  IS 
+  BEGIN
+    self.x := self.x * nb;
+  END;
+  
+  MEMBER FUNCTION RenvoyerYsur2 RETURN NUMBER
+  IS
+  BEGIN
+    RETURN self.y/2;
+  END;
+END;
+  
+
+set serveroutput on;
+
+DECLARE 
+  p1 POINT2;
+BEGIN 
+  p1 :=POINT2(2,0);
+  p1.MULTI_X_NB(5);
+  dbms_output.put_line(p1.x);
+END;
+
+/* QUESTION 1*/
+
+CREATE OR REPLACE TYPE Rect2_t AS OBJECT
+(   p1 B_Point, 
+    p2 B_Point,
+    MEMBER PROCEDURE INSERTION(NB1 B_POINT, NB2 B_POINT));
+
+
+CREATE OR REPLACE TYPE BODY Rect2_t AS
+  MEMBER PROCEDURE INSERTION(NB1 B_POINT, NB2 B_POINT)
+  IS
+  BEGIN
+    self.p1 := NB1;
+    self.p2 := NB2;
+  END;
+END;
+
+
+DECLARE 
+  Bayonne Rect2_t;
+BEGIN
+  Bayonne := Rect2_t(NULL,NULL);
+  Bayonne.INSERTION(B_POINT(5,5),B_POINT(10,10));
+  dbms_output.put_line(Bayonne.p1.x);
+END;
+
+CREATE TABLE VILLE2(
+  Nom VARCHAR2(50),
+  Coordonnees Rect2_t);
+  
+INSERT INTO VILLE2 VALUES ('Bayonne', Rect2_t(B_point(5,5),B_POINT(10,10)));
+
+SELECT v2.nom, v2.coordonnees.p1.x
+FROM VILLE2 V2;
+
+/*QUESTION 3*/
+
