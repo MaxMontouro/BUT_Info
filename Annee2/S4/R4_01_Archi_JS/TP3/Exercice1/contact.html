@@ -87,12 +87,7 @@
                         ajouterElt();
                     }
                     else{
-                        var html = document.getElementsByTagName("html")[0];
-                        var html_childs = document.getElementsByTagName("html")[0].childsNodes;
-                        for(var i=0; i < html_childs.length ;i++){
-                            html.removeChild(html_childs[i]);
-                        }
-                        afficherElement(email, sujet);
+                        document.location.href="./afficherElement.html"; 
                     }
                 }
                 else{

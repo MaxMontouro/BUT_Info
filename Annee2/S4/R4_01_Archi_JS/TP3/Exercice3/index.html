@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3</title>
+</head>
+<body>
+    <h1>Photo :</h1>
+    <input type="button" onclick="afficherSuivant()" value="suivant">
+    <div id="photoAleatoire">
+        <img src="./img/photo1.jpg">
+    </div>
+
+    <script>
+        var photos = ["./img/photo1.jpg", "./img/photo2.png", "./img/photo3.jpg", "./img/photo4.jpeg"];
+        var index = 0;
+
+        function afficherSuivant(){
+            var photoCourante = photos[index];
+            index = (index + 1) % photos.length;
+            document.getElementById("photoAleatoire").innerHTML = "<img src='" + photoCourante + "'>";
+        }
+        setInterval(afficherSuivant, 3000);
+
+        // Déclencher l'affichage de la première photo aléatoire dès le chargement de la page
+        afficherSuivant();  
+    </script>
+</body>
+</html>

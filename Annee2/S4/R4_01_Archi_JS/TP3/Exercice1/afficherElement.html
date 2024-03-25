@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afficher Element Valide</title>
-    <script>
-        import {afficherElement} from './exercice1.js';
-
-    </script>
 </head>
 <body>
     <div id="resultat"></div>
+    <h1>VOus vous êtes bien identifié</h1>
+    <p>envoie de l'email</p>
     <script>
-        afficherElement();
+        function envoyerEmail(){
+            var email = document.getElementById("email").value;
+            window.open("mailto:" + email);
+        }
     </script>
 </body>
 </html>
