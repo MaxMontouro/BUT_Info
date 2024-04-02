@@ -23,6 +23,7 @@
         }
         setInterval(afficherSuivant, 3000);
 
+        document.getElementById("photoAleatoire").onwheel = afficherSuivant();
         // Déclencher l'affichage de la première photo aléatoire dès le chargement de la page
         afficherSuivant();  
     </script>

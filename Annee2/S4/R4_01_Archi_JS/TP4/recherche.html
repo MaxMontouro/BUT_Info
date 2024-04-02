@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=7, initial-scale=1.0">
+    <title>TP4-Rechercher</title>
+    <script>
+
+        var index = 0;
+
+        let objet = {
+            "XML" : ["http://www.w3.org/XML/"],
+            "XLST" : ["http://www.w3.org/TR/xslt"],
+            "XPATH" : ["http://www.w3.org/TR/xpath"],
+            "XQUERY" : ["http://www.w3.org/TR/xquery"],
+            "XSL-FO" : ["http://www.w3.org/TR/xsl"],
+        }
+
+
+        function afficherObjet(saisie) {
+            var keys = Object.keys(objet);
+
+            for (var i = 0; i < keys.length; i++) {
+                if (keys[i] === saisie){
+                    console.log("entrer")
+                    document.getElementById("objetResultat").innerHTML = "<p> Format : </p>" + "<a href='" + objet[saisie][0] + "'>" + objet[saisie][0] + "</a>";
+                    break; // Exit the loop once the match is found
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Recherche :</h1>
+    <label for="saisie2">Entrée un Format</label>
+    <input type="text" id="saisie2" name="saisie2" placeholder="entrer un fichier"><br>
+    <input type="button" value="Lancer la recherche" onclick="afficherObjet(saisie2.value)">  
+    <div id="objetResultat"></div>
+</body>
+</html>
