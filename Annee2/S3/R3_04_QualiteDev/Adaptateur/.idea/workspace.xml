@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52237b41-7f10-4f74-92bd-941787f60ba2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../PatronMediateur/out/production/PatronMediateur/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PatronMediateur/out/production/PatronMediateur/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatronMediateur/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatronMediateur/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../R3_10_Gestion/CM3.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../R3_10_Gestion/CM3.pptx" afterDir="false" />
-    </list>
+    <list default="true" id="52237b41-7f10-4f74-92bd-941787f60ba2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,9 +20,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2ZWiui3UUZYCOH0HfDp8KVFB8mN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,6 +34,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "F:/Documents/BUT/BUT_Info/Annee2/S3/R3_04_QualiteDev/AdaptateurComplet",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -54,6 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702544463746</updated>
       <workItem from="1702544464774" duration="1358000" />
+      <workItem from="1712131312842" duration="61000" />
     </task>
     <servers />
   </component>
