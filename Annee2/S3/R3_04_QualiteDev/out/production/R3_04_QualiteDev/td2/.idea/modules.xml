@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/relationSymetrique1xN/relationSymetrique1xN.iml" filepath="$PROJECT_DIR$/relationSymetrique1xN/relationSymetrique1xN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/singleton/singleton.iml" filepath="$PROJECT_DIR$/singleton/singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/td2.iml" filepath="$PROJECT_DIR$/.idea/td2.iml" />
+    </modules>
+  </component>
+</project>
