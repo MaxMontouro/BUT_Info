@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="diagramme_cu_1_1" version="4">
+  <OBJECT>
+    <ID name="diagramme_cu_1_1" mc="Standard.Package" uid="8892ad9b-385f-4a70-82b7-b3d83a3cb9be"/>
+    <PID name="Diagramme_cu_1_1" mc="Standard.Project" uid="639787b8-8246-4ad3-a2af-068b195d7ca7"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[diagramme_cu_1_1]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Parent" mc="Standard.Actor" uid="2db96b67-5666-4eeb-ad12-09536adab3cf"/>
+        <COMPID name="Enseignant" mc="Standard.Actor" uid="263f77ec-b70e-4719-a5a0-bb2dd9ee63c1"/>
+        <COMPID name="Responsable administratif" mc="Standard.Actor" uid="143cfa59-a279-47e0-b9b2-98d7b5531be7"/>
+        <COMPID name="Participant à la réunion" mc="Standard.Actor" uid="3b174290-f8bd-4456-9f34-91706ffdd75f"/>
+        <COMPID name="Gérer une réunion" mc="Standard.UseCase" uid="7c1d95b0-ca4f-46c2-856d-a1adb56e994f"/>
+        <COMPID name="s'identifier" mc="Standard.UseCase" uid="c18d3a96-0184-4c0f-af5d-4ff625fc497d"/>
+        <COMPID name="Participer à une réunion" mc="Standard.UseCase" uid="8dabc2fc-c23f-4fdf-89fd-bafcf9ee8636"/>
+        <COMPID name="Séléctionner un enseignant" mc="Standard.UseCase" uid="40b55a62-9d12-4f95-92cf-fc4e9740c147"/>
+        <COMPID name="Participant" mc="Standard.Actor" uid="98545f3e-b345-42ff-ab16-08773e149d37"/>
+        <COMPID name="Confirmer leur présence" mc="Standard.UseCase" uid="c8f4b1a8-9847-4466-9723-6d792128de03"/>
+        <COMPID name="Indiquer l'heure d'arrivée" mc="Standard.UseCase" uid="5b3a7549-6346-4ddb-9605-63635c0e8028"/>
+        <COMPID name="Indiquer l'heure de départ" mc="Standard.UseCase" uid="9abe313b-71e3-4147-ad9b-516d5e95c18b"/>
+        <COMPID name="Indiquer l'heure du début d'entretien" mc="Standard.UseCase" uid="e2a43bae-1f03-42df-bcec-59f8a7205825"/>
+        <COMPID name="Indiquer l'heure de fin de l'entretien" mc="Standard.UseCase" uid="2404412c-e28b-42f0-9968-dfe56a547b91"/>
+        <COMPID name="Responsable administratif" mc="Standard.Actor" uid="21af89ce-fd26-45de-a5c3-367a921c55c1"/>
+        <COMPID name="Créer une réunion" mc="Standard.UseCase" uid="06da631f-e9cb-4e14-9b0c-492a921f9221"/>
+        <COMPID name="Modifier la composition" mc="Standard.UseCase" uid="b7cfa2df-8be1-4d9c-8bc7-00d887cc87ba"/>
+        <COMPID name="Annuler la réunion" mc="Standard.UseCase" uid="daac7ed5-58f3-4406-bb1e-91337103248f"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Diagramme de cas d'utilisation diagramme_cu_1_1" mc="Standard.UseCaseDiagram" uid="f9fad7f0-be6c-4aba-a183-b668231f2d83"/>
+        <COMPID name="scenario_complexe_participer_reunion" mc="Standard.UseCaseDiagram" uid="4b90437d-aecd-45b4-b1e9-94820ca3ad3c"/>
+        <COMPID name="scenario_complxe_plannfier_reunion" mc="Standard.UseCaseDiagram" uid="b85420ff-3e58-443a-89a9-70f99d072829"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
