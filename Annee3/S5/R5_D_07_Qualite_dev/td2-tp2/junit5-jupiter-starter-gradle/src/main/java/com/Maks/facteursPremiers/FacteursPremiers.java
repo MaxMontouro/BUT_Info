@@ -29,10 +29,4 @@ public class FacteursPremiers {
 
         return facteurs;
     }
-
-    public static void main(String[] args) {
-        int nombre = 56;  // Exemple : 56 = 2^3 * 7
-        List<Integer> facteurs = generate(nombre);
-        System.out.println("Décomposition en facteurs premiers de " + nombre + " : " + facteurs);
-    }
 }

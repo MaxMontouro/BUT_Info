@@ -38,4 +38,18 @@ class FacteursPremiersTest {
         //THEN
         assertEquals(array, listeEntiers);
     }
+
+    @Test
+    public void generate_devrait_retourner_une_liste_vide_a_cause_du_param_qui_est_negatif(){
+        //GIVEN
+        int exemple = -1;
+        List<Integer> listeEntiers = new ArrayList<>();
+
+        //WHEN
+        List<Integer> array = new ArrayList();
+        array = FacteursPremiers.generate(exemple);
+
+        //THEN
+        assertEquals(array, listeEntiers);
+    }
 }
