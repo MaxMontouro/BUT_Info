@@ -35,4 +35,18 @@ class PersonnageTest {
 
         assertEquals(resultat, "Ouest");
     }
+
+    @Test
+    public void le_test_devrait_retourner_la_direction_en_fonction_du_switch_et_du_param(){
+
+        //GIVEN
+        int direction = 2;
+
+        //WHEN
+
+        String resultat = Personnage.tourner(direction);
+
+        //THEN
+        assertEquals(resultat, "Est");
+    }
 }

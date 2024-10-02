@@ -8,6 +8,29 @@ public class Personnage {
     public static String[] direction = {"Nord", "Est", "Sud", "Ouest"};
 
     public static String tourner(int fois){
-        return direction[fois];
+
+        String reponse = "";
+
+        switch(fois){
+            case 1:
+                reponse = "Nord";
+                break;
+
+            case 2:
+                reponse = "Est";
+                break;
+
+            case 3:
+                reponse = "Sud";
+                break;
+
+            case 4:
+                reponse = "Ouest";
+                break;
+
+
+        }
+
+        return reponse;
     }
 }
