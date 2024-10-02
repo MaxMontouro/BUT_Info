@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.Maks.facteursPremiers.FacteursPremiersTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-02T07:46:47" hostname="laptop-Max" time="0.009">
-  <properties/>
-  <testcase name="generate_devrait_retourner_la_decomposition_du_nombre()" classname="com.Maks.facteursPremiers.FacteursPremiersTest" time="0.009"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -15,7 +15,7 @@ class FacteursPremiersTest {
         //GIVEN
         int exemple = 1;
         List<Integer> listeEntiers = new ArrayList<>();
-
+        listeEntiers.add(1);
         //WHEN
         List<Integer> array = new ArrayList();
         array = FacteursPremiers.generate(exemple);
