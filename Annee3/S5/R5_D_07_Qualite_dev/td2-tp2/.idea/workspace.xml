@@ -7,6 +7,23 @@
     <list default="true" id="6a07c2a7-de8d-474e-8b16-fb0f4a6ff28c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../Calculator" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/.gradle/8.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/classes/java/main/com/Maks/Jeu/Personnage.class" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/classes/java/main/com/Maks/Jeu/Personnage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/classes/java/test/com/Maks/Jeu/PersonnageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/classes/java/test/com/Maks/Jeu/PersonnageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/reports/tests/test/classes/com.Maks.Jeu.PersonnageTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/reports/tests/test/classes/com.Maks.Jeu.PersonnageTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/reports/tests/test/packages/com.Maks.Jeu.html" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/reports/tests/test/packages/com.Maks.Jeu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/test-results/test/TEST-com.Maks.Jeu.PersonnageTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/test-results/test/TEST-com.Maks.Jeu.PersonnageTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/tmp/compileJava/compileTransaction/stash-dir/Personnage.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/tmp/compileJava/compileTransaction/stash-dir/Personnage.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/tmp/compileTestJava/compileTransaction/stash-dir/PersonnageTest.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/tmp/compileTestJava/compileTransaction/stash-dir/PersonnageTest.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/src/main/java/com/Maks/Jeu/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/src/main/java/com/Maks/Jeu/Personnage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/src/test/java/com/Maks/Jeu/PersonnageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/junit5-jupiter-starter-gradle/src/test/java/com/Maks/Jeu/PersonnageTest.java" afterDir="false" />
     </list>
@@ -23,6 +40,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/junit5-jupiter-starter-gradle">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -59,8 +79,11 @@
     "Gradle.FacteursPremiersTest.generate_devrait_retourner_la_decomposition_du_nombre.executor": "Run",
     "Gradle.FacteursPremiersTest.generate_devrait_retourner_une_erreur_a_cause_du_param.executor": "Run",
     "Gradle.PersonnageTest.le_test_devrait_retourner_Nord_avec_en_param_0.executor": "Run",
+    "Gradle.PersonnageTest.le_test_devrait_retourner_Nord_avec_en_param_1.executor": "Run",
     "Gradle.PersonnageTest.le_test_devrait_retourner_la_direction_de_base.executor": "Run",
     "Gradle.PersonnageTest.le_test_devrait_retourner_la_direction_en_fonction_du_param.executor": "Run",
+    "Gradle.PersonnageTest.le_test_devrait_retourner_la_direction_en_fonction_du_param_et_de_son_modulo.executor": "Run",
+    "Gradle.PersonnageTest.le_test_devrait_retourner_la_direction_en_fonction_du_switch_et_du_param.executor": "Run",
     "Gradle.Upgrade Gradle wrapper.executor": "Run",
     "Gradle.junit5-jupiter-starter-gradle [:Main.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -88,35 +111,12 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.Maks.chiffresRomains" />
       <recent name="com.Maks.Jeu" />
       <recent name="com.Maks.facteursPremiers" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PersonnageTest.le_test_devrait_retourner_la_direction_en_fonction_du_switch_et_du_param">
-    <configuration name="FacteursPremiersTest.generate_devrait_retourner_la_decomposition_du_nombre" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/junit5-jupiter-starter-gradle" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.Maks.facteursPremiers.FacteursPremiersTest.generate_devrait_retourner_la_decomposition_du_nombre&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.PersonnageTest.le_test_devrait_retourner_la_direction_en_fonction_du_param_et_de_son_modulo">
     <configuration name="PersonnageTest.le_test_devrait_retourner_Nord_avec_en_param_0" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -141,7 +141,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="PersonnageTest.le_test_devrait_retourner_la_direction_de_base" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PersonnageTest.le_test_devrait_retourner_Nord_avec_en_param_1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/junit5-jupiter-starter-gradle" />
@@ -154,7 +154,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.Maks.Jeu.PersonnageTest.le_test_devrait_retourner_la_direction_de_base&quot;" />
+            <option value="&quot;com.Maks.Jeu.PersonnageTest.le_test_devrait_retourner_Nord_avec_en_param_1&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -179,6 +179,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.Maks.Jeu.PersonnageTest.le_test_devrait_retourner_la_direction_en_fonction_du_param&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PersonnageTest.le_test_devrait_retourner_la_direction_en_fonction_du_param_et_de_son_modulo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/junit5-jupiter-starter-gradle" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.Maks.Jeu.PersonnageTest.le_test_devrait_retourner_la_direction_en_fonction_du_param_et_de_son_modulo&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -215,11 +239,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PersonnageTest.le_test_devrait_retourner_la_direction_en_fonction_du_switch_et_du_param" />
+        <item itemvalue="Gradle.PersonnageTest.le_test_devrait_retourner_la_direction_en_fonction_du_param_et_de_son_modulo" />
         <item itemvalue="Gradle.PersonnageTest.le_test_devrait_retourner_la_direction_en_fonction_du_param" />
+        <item itemvalue="Gradle.PersonnageTest.le_test_devrait_retourner_Nord_avec_en_param_1" />
         <item itemvalue="Gradle.PersonnageTest.le_test_devrait_retourner_Nord_avec_en_param_0" />
-        <item itemvalue="Gradle.PersonnageTest.le_test_devrait_retourner_la_direction_de_base" />
-        <item itemvalue="Gradle.FacteursPremiersTest.generate_devrait_retourner_la_decomposition_du_nombre" />
+        <item itemvalue="Gradle.PersonnageTest.le_test_devrait_retourner_la_direction_en_fonction_du_switch_et_du_param" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +266,7 @@
       <workItem from="1727768870064" duration="1664000" />
       <workItem from="1727770551080" duration="602000" />
       <workItem from="1727771739659" duration="5438000" />
-      <workItem from="1727854720310" duration="2429000" />
+      <workItem from="1727854720310" duration="5178000" />
     </task>
     <servers />
   </component>

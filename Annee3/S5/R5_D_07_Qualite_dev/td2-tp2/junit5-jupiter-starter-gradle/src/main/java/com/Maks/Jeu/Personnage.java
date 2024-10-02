@@ -11,6 +11,8 @@ public class Personnage {
 
         String reponse = "";
 
+        fois = fois%4;
+
         switch(fois){
             case 1:
                 reponse = "Nord";
@@ -28,7 +30,9 @@ public class Personnage {
                 reponse = "Ouest";
                 break;
 
-
+            default:
+                reponse = "Nord";
+                break;
         }
 
         return reponse;
