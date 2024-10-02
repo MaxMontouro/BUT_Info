@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.Maks.Jeu.PersonnageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-02T08:00:49" hostname="laptop-Max" time="0.011">
+<testsuite name="com.Maks.Jeu.PersonnageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-02T08:13:35" hostname="laptop-Max" time="0.008">
   <properties/>
-  <testcase name="le_test_devrait_retourner_la_direction_de_base()" classname="com.Maks.Jeu.PersonnageTest" time="0.011"/>
+  <testcase name="le_test_devrait_retourner_la_direction_en_fonction_du_param()" classname="com.Maks.Jeu.PersonnageTest" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
