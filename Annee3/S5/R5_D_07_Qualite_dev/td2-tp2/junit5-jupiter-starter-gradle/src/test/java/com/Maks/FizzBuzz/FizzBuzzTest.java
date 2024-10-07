@@ -57,4 +57,32 @@ class FizzBuzzTest {
         //THEN
         assertEquals(unNombre, res);
     }
+
+    @ParameterizedTest
+    @CsvSource({
+            "1, 1",
+            "2, 2",
+            "3, Fizz",
+            "4, 4",
+            "5, Buzz",
+            "6, Fizz",
+            "7, 7",
+            "8, 8",
+            "9, Fizz",
+            "10, Buzz",
+            "11, 11",
+            "12, Fizz",
+            "13, 13",
+            "14, 14",
+            "15, FizzBuzz"
+    })
+    void fizzBuzz_de_15_devrait_retourner_FizzBuzz(int nb, String unNombre){
+        //GIVEN
+
+        //WHEN
+        String res = FizzBuzz.de(nb);
+
+        //THEN
+        assertEquals(unNombre, res);
+    }
 }
