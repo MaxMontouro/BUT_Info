@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.Maks.FizzBuzz.FizzBuzzTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-10-07T14:02:54" hostname="laptop-Max" time="0.025">
+<testsuite name="com.Maks.FizzBuzz.FizzBuzzTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-10-07T14:07:21" hostname="laptop-Max" time="0.033">
   <properties/>
-  <testcase name="[1] 1, 1" classname="com.Maks.FizzBuzz.FizzBuzzTest" time="0.018"/>
+  <testcase name="[1] 1, 1" classname="com.Maks.FizzBuzz.FizzBuzzTest" time="0.017"/>
   <testcase name="[2] 2, 2" classname="com.Maks.FizzBuzz.FizzBuzzTest" time="0.001"/>
   <testcase name="[3] 3, Fizz" classname="com.Maks.FizzBuzz.FizzBuzzTest" time="0.001"/>
+  <testcase name="[4] 4, 4" classname="com.Maks.FizzBuzz.FizzBuzzTest" time="0.0"/>
+  <testcase name="[5] 5, Buzz" classname="com.Maks.FizzBuzz.FizzBuzzTest" time="0.001"/>
+  <testcase name="[6] 6, Fizz" classname="com.Maks.FizzBuzz.FizzBuzzTest" time="0.001"/>
+  <testcase name="[7] 7, 7" classname="com.Maks.FizzBuzz.FizzBuzzTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
