@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TennisGame2.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Tennis</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">TennisGame2.java</span></div><h1>TennisGame2.java</h1><pre class="source lang-java linenums">
+public class TennisGame2 implements TennisGame
+{
+<span class="fc" id="L4">    public int P1point = 0;</span>
+<span class="fc" id="L5">    public int P2point = 0;</span>
+    
+<span class="fc" id="L7">    public String P1res = &quot;&quot;;</span>
+<span class="fc" id="L8">    public String P2res = &quot;&quot;;</span>
+    private String player1Name;
+    private String player2Name;
+
+<span class="fc" id="L12">    public TennisGame2(String player1Name, String player2Name) {</span>
+<span class="fc" id="L13">        this.player1Name = player1Name;</span>
+<span class="fc" id="L14">        this.player2Name = player2Name;</span>
+<span class="fc" id="L15">    }</span>
+
+    public String getScore(){
+<span class="fc" id="L18">        String score = &quot;&quot;;</span>
+<span class="fc bfc" id="L19" title="All 4 branches covered.">        if (P1point == P2point &amp;&amp; P1point &lt; 4)</span>
+        {
+<span class="fc bfc" id="L21" title="All 2 branches covered.">            if (P1point==0)</span>
+<span class="fc" id="L22">                score = &quot;Love&quot;;</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">            if (P1point==1)</span>
+<span class="fc" id="L24">                score = &quot;Fifteen&quot;;</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">            if (P1point==2)</span>
+<span class="fc" id="L26">                score = &quot;Thirty&quot;;</span>
+<span class="fc" id="L27">            score += &quot;-All&quot;;</span>
+        }
+<span class="fc bfc" id="L29" title="All 4 branches covered.">        if (P1point==P2point &amp;&amp; P1point&gt;=3)</span>
+<span class="fc" id="L30">            score = &quot;Deuce&quot;;</span>
+        
+<span class="fc bfc" id="L32" title="All 4 branches covered.">        if (P1point &gt; 0 &amp;&amp; P2point==0)</span>
+        {
+<span class="fc bfc" id="L34" title="All 2 branches covered.">            if (P1point==1)</span>
+<span class="fc" id="L35">                P1res = &quot;Fifteen&quot;;</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">            if (P1point==2)</span>
+<span class="fc" id="L37">                P1res = &quot;Thirty&quot;;</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">            if (P1point==3)</span>
+<span class="fc" id="L39">                P1res = &quot;Forty&quot;;</span>
+            
+<span class="fc" id="L41">            P2res = &quot;Love&quot;;</span>
+<span class="fc" id="L42">            score = P1res + &quot;-&quot; + P2res;</span>
+        }
+<span class="fc bfc" id="L44" title="All 4 branches covered.">        if (P2point &gt; 0 &amp;&amp; P1point==0)</span>
+        {
+<span class="fc bfc" id="L46" title="All 2 branches covered.">            if (P2point==1)</span>
+<span class="fc" id="L47">                P2res = &quot;Fifteen&quot;;</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">            if (P2point==2)</span>
+<span class="fc" id="L49">                P2res = &quot;Thirty&quot;;</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">            if (P2point==3)</span>
+<span class="fc" id="L51">                P2res = &quot;Forty&quot;;</span>
+            
+<span class="fc" id="L53">            P1res = &quot;Love&quot;;</span>
+<span class="fc" id="L54">            score = P1res + &quot;-&quot; + P2res;</span>
+        }
+        
+<span class="fc bfc" id="L57" title="All 4 branches covered.">        if (P1point&gt;P2point &amp;&amp; P1point &lt; 4)</span>
+        {
+<span class="fc bfc" id="L59" title="All 2 branches covered.">            if (P1point==2)</span>
+<span class="fc" id="L60">                P1res=&quot;Thirty&quot;;</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">            if (P1point==3)</span>
+<span class="fc" id="L62">                P1res=&quot;Forty&quot;;</span>
+<span class="fc bfc" id="L63" title="All 2 branches covered.">            if (P2point==1)</span>
+<span class="fc" id="L64">                P2res=&quot;Fifteen&quot;;</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">            if (P2point==2)</span>
+<span class="fc" id="L66">                P2res=&quot;Thirty&quot;;</span>
+<span class="fc" id="L67">            score = P1res + &quot;-&quot; + P2res;</span>
+        }
+<span class="fc bfc" id="L69" title="All 4 branches covered.">        if (P2point&gt;P1point &amp;&amp; P2point &lt; 4)</span>
+        {
+<span class="fc bfc" id="L71" title="All 2 branches covered.">            if (P2point==2)</span>
+<span class="fc" id="L72">                P2res=&quot;Thirty&quot;;</span>
+<span class="fc bfc" id="L73" title="All 2 branches covered.">            if (P2point==3)</span>
+<span class="fc" id="L74">                P2res=&quot;Forty&quot;;</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">            if (P1point==1)</span>
+<span class="fc" id="L76">                P1res=&quot;Fifteen&quot;;</span>
+<span class="fc bfc" id="L77" title="All 2 branches covered.">            if (P1point==2)</span>
+<span class="fc" id="L78">                P1res=&quot;Thirty&quot;;</span>
+<span class="fc" id="L79">            score = P1res + &quot;-&quot; + P2res;</span>
+        }
+        
+<span class="fc bfc" id="L82" title="All 4 branches covered.">        if (P1point &gt; P2point &amp;&amp; P2point &gt;= 3)</span>
+        {
+<span class="fc" id="L84">            score = &quot;Advantage player1&quot;;</span>
+        }
+        
+<span class="fc bfc" id="L87" title="All 4 branches covered.">        if (P2point &gt; P1point &amp;&amp; P1point &gt;= 3)</span>
+        {
+<span class="fc" id="L89">            score = &quot;Advantage player2&quot;;</span>
+        }
+        
+<span class="pc bpc" id="L92" title="1 of 6 branches missed.">        if (P1point&gt;=4 &amp;&amp; P2point&gt;=0 &amp;&amp; (P1point-P2point)&gt;=2)</span>
+        {
+<span class="fc" id="L94">            score = &quot;Win for player1&quot;;</span>
+        }
+<span class="pc bpc" id="L96" title="1 of 6 branches missed.">        if (P2point&gt;=4 &amp;&amp; P1point&gt;=0 &amp;&amp; (P2point-P1point)&gt;=2)</span>
+        {
+<span class="fc" id="L98">            score = &quot;Win for player2&quot;;</span>
+        }
+<span class="fc" id="L100">        return score;</span>
+    }
+    
+    public void SetP1Score(int number){
+        
+<span class="nc bnc" id="L105" title="All 2 branches missed.">        for (int i = 0; i &lt; number; i++)</span>
+        {
+<span class="nc" id="L107">            P1Score();</span>
+        }
+            
+<span class="nc" id="L110">    }</span>
+    
+    public void SetP2Score(int number){
+        
+<span class="nc bnc" id="L114" title="All 2 branches missed.">        for (int i = 0; i &lt; number; i++)</span>
+        {
+<span class="nc" id="L116">            P2Score();</span>
+        }
+            
+<span class="nc" id="L119">    }</span>
+    
+    public void P1Score(){
+<span class="fc" id="L122">        P1point++;</span>
+<span class="fc" id="L123">    }</span>
+    
+    public void P2Score(){
+<span class="fc" id="L126">        P2point++;</span>
+<span class="fc" id="L127">    }</span>
+
+    public void wonPoint(String player) {
+<span class="fc bfc" id="L130" title="All 2 branches covered.">        if (player == &quot;player1&quot;)</span>
+<span class="fc" id="L131">            P1Score();</span>
+        else
+<span class="fc" id="L133">            P2Score();</span>
+<span class="fc" id="L134">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
