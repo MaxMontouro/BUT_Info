@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TennisTest2" tests="31" skipped="0" failures="0" errors="0" timestamp="2024-10-08T07:54:04" hostname="laptop-Max" time="0.089">
+<testsuite name="TennisTest2" tests="31" skipped="0" failures="0" errors="0" timestamp="2024-10-14T12:28:26" hostname="PCVIUT512" time="0.731">
   <properties/>
-  <testcase name="[1] 0, 0, Love-All" classname="TennisTest2" time="0.034"/>
-  <testcase name="[2] 1, 1, Fifteen-All" classname="TennisTest2" time="0.001"/>
-  <testcase name="[3] 2, 2, Thirty-All" classname="TennisTest2" time="0.001"/>
-  <testcase name="[4] 3, 3, Deuce" classname="TennisTest2" time="0.0"/>
-  <testcase name="[5] 4, 4, Deuce" classname="TennisTest2" time="0.001"/>
-  <testcase name="[6] 1, 0, Fifteen-Love" classname="TennisTest2" time="0.003"/>
-  <testcase name="[7] 0, 1, Love-Fifteen" classname="TennisTest2" time="0.001"/>
-  <testcase name="[8] 2, 0, Thirty-Love" classname="TennisTest2" time="0.001"/>
-  <testcase name="[9] 0, 2, Love-Thirty" classname="TennisTest2" time="0.001"/>
-  <testcase name="[10] 3, 0, Forty-Love" classname="TennisTest2" time="0.0"/>
-  <testcase name="[11] 0, 3, Love-Forty" classname="TennisTest2" time="0.001"/>
-  <testcase name="[12] 4, 0, Win for player1" classname="TennisTest2" time="0.001"/>
-  <testcase name="[13] 0, 4, Win for player2" classname="TennisTest2" time="0.0"/>
-  <testcase name="[14] 2, 1, Thirty-Fifteen" classname="TennisTest2" time="0.001"/>
+  <testcase name="[1] 0, 0, Love-All" classname="TennisTest2" time="0.244"/>
+  <testcase name="[2] 1, 1, Fifteen-All" classname="TennisTest2" time="0.004"/>
+  <testcase name="[3] 2, 2, Thirty-All" classname="TennisTest2" time="0.004"/>
+  <testcase name="[4] 3, 3, Deuce" classname="TennisTest2" time="0.016"/>
+  <testcase name="[5] 4, 4, Deuce" classname="TennisTest2" time="0.008"/>
+  <testcase name="[6] 1, 0, Fifteen-Love" classname="TennisTest2" time="0.033"/>
+  <testcase name="[7] 0, 1, Love-Fifteen" classname="TennisTest2" time="0.003"/>
+  <testcase name="[8] 2, 0, Thirty-Love" classname="TennisTest2" time="0.002"/>
+  <testcase name="[9] 0, 2, Love-Thirty" classname="TennisTest2" time="0.005"/>
+  <testcase name="[10] 3, 0, Forty-Love" classname="TennisTest2" time="0.018"/>
+  <testcase name="[11] 0, 3, Love-Forty" classname="TennisTest2" time="0.006"/>
+  <testcase name="[12] 4, 0, Win for player1" classname="TennisTest2" time="0.002"/>
+  <testcase name="[13] 0, 4, Win for player2" classname="TennisTest2" time="0.017"/>
+  <testcase name="[14] 2, 1, Thirty-Fifteen" classname="TennisTest2" time="0.006"/>
   <testcase name="[15] 1, 2, Fifteen-Thirty" classname="TennisTest2" time="0.001"/>
-  <testcase name="[16] 3, 1, Forty-Fifteen" classname="TennisTest2" time="0.0"/>
-  <testcase name="[17] 1, 3, Fifteen-Forty" classname="TennisTest2" time="0.001"/>
-  <testcase name="[18] 4, 1, Win for player1" classname="TennisTest2" time="0.0"/>
-  <testcase name="[19] 1, 4, Win for player2" classname="TennisTest2" time="0.001"/>
-  <testcase name="[20] 3, 2, Forty-Thirty" classname="TennisTest2" time="0.001"/>
-  <testcase name="[21] 2, 3, Thirty-Forty" classname="TennisTest2" time="0.0"/>
-  <testcase name="[22] 4, 2, Win for player1" classname="TennisTest2" time="0.0"/>
-  <testcase name="[23] 2, 4, Win for player2" classname="TennisTest2" time="0.001"/>
-  <testcase name="[24] 4, 3, Advantage player1" classname="TennisTest2" time="0.0"/>
-  <testcase name="[25] 3, 4, Advantage player2" classname="TennisTest2" time="0.001"/>
-  <testcase name="[26] 5, 4, Advantage player1" classname="TennisTest2" time="0.001"/>
-  <testcase name="[27] 4, 5, Advantage player2" classname="TennisTest2" time="0.001"/>
-  <testcase name="[28] 15, 14, Advantage player1" classname="TennisTest2" time="0.001"/>
-  <testcase name="[29] 14, 15, Advantage player2" classname="TennisTest2" time="0.001"/>
+  <testcase name="[16] 3, 1, Forty-Fifteen" classname="TennisTest2" time="0.006"/>
+  <testcase name="[17] 1, 3, Fifteen-Forty" classname="TennisTest2" time="0.011"/>
+  <testcase name="[18] 4, 1, Win for player1" classname="TennisTest2" time="0.006"/>
+  <testcase name="[19] 1, 4, Win for player2" classname="TennisTest2" time="0.005"/>
+  <testcase name="[20] 3, 2, Forty-Thirty" classname="TennisTest2" time="0.004"/>
+  <testcase name="[21] 2, 3, Thirty-Forty" classname="TennisTest2" time="0.004"/>
+  <testcase name="[22] 4, 2, Win for player1" classname="TennisTest2" time="0.006"/>
+  <testcase name="[23] 2, 4, Win for player2" classname="TennisTest2" time="0.002"/>
+  <testcase name="[24] 4, 3, Advantage player1" classname="TennisTest2" time="0.004"/>
+  <testcase name="[25] 3, 4, Advantage player2" classname="TennisTest2" time="0.005"/>
+  <testcase name="[26] 5, 4, Advantage player1" classname="TennisTest2" time="0.003"/>
+  <testcase name="[27] 4, 5, Advantage player2" classname="TennisTest2" time="0.007"/>
+  <testcase name="[28] 15, 14, Advantage player1" classname="TennisTest2" time="0.004"/>
+  <testcase name="[29] 14, 15, Advantage player2" classname="TennisTest2" time="0.007"/>
   <testcase name="[30] 6, 4, Win for player1" classname="TennisTest2" time="0.001"/>
   <testcase name="[31] 4, 6, Win for player2" classname="TennisTest2" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
